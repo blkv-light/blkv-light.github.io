@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BLKV: Bi-LED линзы и ремонт фар на Звенигородском шоссе</title>
+<meta name="description" content="Автосвет BLKV: установка Bi-LED линз под ключ, ремонт ДХО и «ангельских глазок», запотевание, полировка и бронь фар. Звенигородское шоссе, 33-й км, Одинцовский округ. Ежедневно 10:00–20:00. 4,8 на Яндекс Картах.">
+<meta name="robots" content="noindex, nofollow"><!-- черновик: снять noindex при запуске -->
+<meta name="theme-color" content="#08080a">
+<link rel="icon" href="img/logo.jpg">
+<meta property="og:title" content="BLKV: Bi-LED линзы и ремонт фар">
+<meta property="og:description" content="Подберите, что сделать с фарами, посмотрите свет после работы и напишите Александру.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="preload" href="img/hero.jpg" as="image">
+<link rel="preload" href="fonts/unbounded-800.woff2" as="font" type="font/woff2" crossorigin>
+<!-- SEO. Цены только те, что студия указала на Яндекс Картах -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"BLKV","alternateName":"Blackov, автосвет","image":"img/hero.jpg","telephone":"+7 995 118-26-07","priceRange":"2 000–20 000 ₽",
+"address":{"@type":"PostalAddress","streetAddress":"Звенигородское шоссе, 33-й километр, 2","addressLocality":"посёлок Летний Отдых","addressRegion":"Московская область, Одинцовский городской округ","postalCode":"143022","addressCountry":"RU"},
+"geo":{"@type":"GeoCoordinates","latitude":55.644534,"longitude":36.977535},
+"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:00"},
+"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"20","reviewCount":"15","bestRating":"5"},
+"sameAs":["https://t.me/BLKV_LIGHT","https://wa.me/79951182607","https://max.ru/u/f9LHodD0cOInFZahajUGxndU4QHU-3QPquoGbF4ta5MS1500GnY4IenWfS0","https://yandex.ru/maps/org/136634259206/"],
+"makesOffer":[
+ {"@type":"Offer","name":"Установка Bi-LED линз под ключ","price":"20000","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Ремонт фар, ДХО и «ангельских глазок»","price":"12000","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Устранение запотевания фар","price":"7000","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Ремонт креплений фар","price":"5000","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Регулировка света фар","price":"2500","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Полировка фар","price":"2000","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Бронирование фар полиуретаном","price":"2000","priceCurrency":"RUB"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"Сколько стоят Bi-LED линзы?","acceptedAnswer":{"@type":"Answer","text":"Установка Bi-LED под ключ от 20 000 ₽: разбираем фары, ставим модули с переходными рамками и собираем герметично. Точную цену назовём по модели машины до начала работ."}},
+ {"@type":"Question","name":"Сколько времени занимает работа?","acceptedAnswer":{"@type":"Answer","text":"Регулировка света 20–30 минут. Линзы часто успеваем за день: утром отдали машину, к вечеру забрали. Точный срок скажем при записи."}},
+ {"@type":"Question","name":"Фары запотевают, что делать?","acceptedAnswer":{"@type":"Answer","text":"Приезжайте на диагностику, она бесплатная. Найдём причину: уплотнители, осушители, трещины, крепления. Восстановление герметичности от 7 000 ₽."}},
+ {"@type":"Question","name":"Есть гарантия?","acceptedAnswer":{"@type":"Answer","text":"Да, на работы даём гарантию. Срок зависит от работы, скажем при записи."}},
+ {"@type":"Question","name":"Где вы находитесь?","acceptedAnswer":{"@type":"Answer","text":"Звенигородское шоссе, 33-й километр, 2, посёлок Летний Отдых, Одинцовский округ. Ежедневно с 10:00 до 20:00."}}]}
+</script>
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/unbounded-800.woff2) format('woff2')}
+
+/* ===== ТОКЕНЫ. Перекраска только тут. Чёрный и золото с баннеров студии ===== */
+:root{
+ --bg:#08080a;--bg2:#0e0e11;--bg3:#16161a;--tx:#f2efe9;--tx2:#c9c5bc;--mut:#8a877f;--line:rgba(255,255,255,.09);
+ --acc:#c9a063;--acc-rgb:201,160,99;--accInk:#140e05;
+ --cold:#dfeaff;--cold-rgb:214,228,255;
+ --head:"Unbounded","Inter",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;
+ --pad:max(clamp(16px,5vw,80px),calc((100vw - 1500px)/2));
+ --ease:cubic-bezier(.2,.7,.1,1);--ease2:cubic-bezier(.77,0,.18,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{background:var(--bg);color:var(--tx);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{font:inherit;color:inherit}
+h1,h2,h3,dt{text-wrap:balance}p,dd{text-wrap:pretty}
+.facts b,.row b,.tot,.score b{font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+section{position:relative;padding:clamp(80px,10vw,140px) var(--pad)}
+
+/* зерно поверх всего */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.045;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* подпись с линией + заголовок со второй серой строкой */
+.k{font:600 11px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--mut);display:flex;align-items:center;gap:14px}
+.k:before{content:"";width:28px;height:1px;background:var(--acc);transform-origin:left;transition:transform 1s var(--ease) .1s;flex-shrink:0}
+.js .k:before{transform:scaleX(0)}.js .in .k:before,.js .k.in:before,.hero.go .k:before{transform:none}
+h2{font:800 clamp(28px,3.7vw,56px)/1.04 var(--head);letter-spacing:-.03em;margin-top:22px}
+h2 em{font-style:normal;color:var(--mut)}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:56px;padding:0 28px;font:700 14px/1 var(--body);letter-spacing:.02em;background:var(--tx);color:var(--bg);border:1px solid var(--tx);border-radius:10px;transition:background .3s,color .3s,border-color .3s,transform .2s;cursor:pointer;white-space:nowrap}
+.btn:hover{background:var(--acc);border-color:var(--acc);color:var(--accInk)}.btn:active{transform:scale(.98)}
+.btn.a{background:var(--acc);border-color:var(--acc);color:var(--accInk)}.btn.a:hover{background:var(--tx);border-color:var(--tx)}
+.btn.o{background:rgba(8,8,10,.35);color:var(--tx);border-color:rgba(255,255,255,.28)}
+.btn.o:hover{border-color:var(--tx);background:var(--tx);color:var(--bg)}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+/* блик по главной кнопке, как свет по лаку */
+.shine{position:relative;overflow:hidden;isolation:isolate}
+.shine:after{content:"";position:absolute;top:-20%;bottom:-20%;left:-40%;width:30%;z-index:-1;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg) translateX(-120%);animation:shine 5.5s ease-in-out 3s infinite}
+@keyframes shine{0%,72%{transform:skewX(-20deg) translateX(-120%)}100%{transform:skewX(-20deg) translateX(560%)}}
+
+/* появление: строки заголовка из-под маски + блоки */
+.js [data-r]{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease),transform 1.2s var(--ease)}
+.js [data-r].in{opacity:1;transform:none}
+.ln{display:block;overflow:hidden;padding-top:.12em;margin-top:-.12em;padding-bottom:.06em}
+.ln b{display:block;font-weight:inherit;transform:translateY(115%) rotate(2deg);transform-origin:left top;transition:transform 1.25s var(--ease)}
+h2.in .ln b,.hero.go h1 .ln b{transform:none}
+h2 .ln:nth-child(2) b{transition-delay:.1s}h2 .ln:nth-child(3) b{transition-delay:.2s}
+
+/* фото шторкой */
+[data-img]{position:relative;overflow:hidden;--cover:var(--bg)}
+.js [data-img]:after{content:"";position:absolute;inset:-1px;z-index:5;background:var(--cover);transform-origin:50% 0;transition:transform 1.5s var(--ease2);pointer-events:none}
+.js [data-img].in:after{transform:scaleY(0)}
+.js [data-img]>img{transform:scale(1.25);transition:transform 2.4s var(--ease)}
+.js [data-img].in>img{transform:none}
+
+/* шапка-стекло */
+nav{position:fixed;z-index:50;top:0;left:0;right:0;height:80px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 var(--pad);border-bottom:1px solid transparent;transition:background .4s,height .4s,border-color .4s}
+nav.s{background:rgba(8,8,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);height:66px;border-color:var(--line)}
+.logo{display:flex;align-items:center;gap:12px;font:800 14px/1 var(--head);letter-spacing:-.01em;color:var(--tx);white-space:nowrap}
+.logo img{width:42px;height:42px;border-radius:10px;border:1px solid var(--line);object-fit:cover;transition:transform .4s var(--ease)}
+.logo:hover img{transform:rotate(-6deg) scale(1.05)}
+.links{display:flex;gap:30px;font:600 14px/1 var(--body);color:var(--tx2)}
+.links a{position:relative}.links a:after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:var(--tx);transition:right .35s var(--ease)}
+.links a:hover{color:var(--tx)}.links a:hover:after{right:0}
+nav .btn{height:44px;padding:0 18px;font-size:13px}
+/* РАБОТЫ: сетка 3:4 со сдвигом + лайтбокс */
+.wg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);margin-top:64px}
+.wg .c:nth-child(3n+2){margin-top:70px}
+.c{cursor:pointer;background:none;border:0;text-align:left;display:block;width:100%}
+.c .ph{aspect-ratio:3/4;background:var(--bg3);border-radius:12px}
+.c .ph>img{width:100%;height:100%;object-fit:cover}
+.c:hover .ph>img{transform:scale(1.05)!important;transition:transform 2.2s var(--ease)!important}
+.c h3{font:800 15px/1.25 var(--head);margin-top:16px}.c p{color:var(--mut);font-size:14px;margin-top:5px}
+.lbx{position:fixed;inset:0;z-index:90;background:rgba(4,4,5,.95);display:flex;align-items:center;justify-content:center;gap:40px;padding:20px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s,visibility 0s .4s}
+.lbx.on{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .4s}
+.lbx img{max-height:86vh;max-width:min(640px,90vw);object-fit:contain;border-radius:10px;transform:scale(.94);transition:transform .6s var(--ease)}.lbx.on img{transform:none}
+.lbx .t{max-width:300px}.lbx .t h3{font:800 22px/1.15 var(--head)}.lbx .t p{color:var(--mut);margin-top:10px}
+.lbx .x{position:absolute;top:22px;right:26px;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:none;color:var(--tx);font:400 26px/1 var(--body);cursor:pointer}
+.lbx .x:hover{background:var(--tx);color:var(--bg)}
+
+/* МАСТЕР И БОКС */
+.master{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,6vw,100px);align-items:center;background:var(--bg2)}
+.master [data-img]{--cover:var(--bg2);aspect-ratio:4/5;border-radius:14px}.master [data-img]>img{width:100%;height:100%;object-fit:cover}
+.master figcaption{margin-top:14px;font:600 11px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
+.master .big{font:500 clamp(19px,1.8vw,26px)/1.45 var(--body);margin-top:28px}.master .big em{font-style:normal;color:var(--mut)}
+.why{list-style:none;margin-top:30px;border-top:1px solid var(--line)}
+.why li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid var(--line);color:var(--tx2);font-size:15.5px}
+.why b{font:800 13px/1.5 var(--head);color:var(--tx)}
+
+/* ОТЗЫВЫ: колонки бегут вверх и вниз, наведение останавливает */
+.rv-h{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.score{display:flex;align-items:center;gap:22px}.score b{font:800 68px/1 var(--head);letter-spacing:-.05em}.score span{color:var(--mut);font-size:14px;line-height:1.5}.score i{font-style:normal;color:var(--acc);letter-spacing:.1em}
+.mq{position:relative;display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:clamp(10px,1.4vw,20px);align-items:start;height:clamp(540px,80vh,740px);overflow:hidden;margin-top:56px;
+ -webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent)}
+.mq-col{display:flex;flex-direction:column;gap:clamp(10px,1.4vw,20px);animation:mqUp var(--dur,48s) linear infinite;will-change:transform}
+.mq-col.dn{animation-name:mqDn}
+.mq:hover .mq-col,.mq.off .mq-col{animation-play-state:paused}
+@keyframes mqUp{from{transform:translateY(0)}to{transform:translateY(calc(-50% - clamp(10px,1.4vw,20px)/2))}}
+@keyframes mqDn{from{transform:translateY(calc(-50% - clamp(10px,1.4vw,20px)/2))}to{transform:translateY(0)}}
+.rc{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:24px 22px 20px;overflow:hidden;transition:border-color .4s}
+.rc:hover{border-color:rgba(var(--acc-rgb),.35)}
+.rc .st5{color:var(--acc);letter-spacing:.14em;font-size:13px}
+.rc p{color:var(--tx2);font-size:15px;line-height:1.55;margin-top:12px}
+.rc .who{display:flex;align-items:center;gap:12px;margin-top:18px}
+.rc .av{width:36px;height:36px;flex-shrink:0;display:grid;place-items:center;border-radius:50%;background:rgba(var(--acc-rgb),.12);border:1px solid rgba(var(--acc-rgb),.35);color:var(--acc);font:800 13px/1 var(--head)}
+.rc .who b{display:block;font:600 14px/1.2 var(--body);color:var(--tx)}.rc .who small{display:block;font-size:12.5px;color:var(--mut);margin-top:3px}
+.rv-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:36px}
+.rv-foot span{color:var(--mut);font-size:14px}
+
+/* ЭТАПЫ: линия заполняется при прокрутке, цифры загораются */
+.how{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(30px,6vw,100px);align-items:start;background:var(--bg2)}
+.how .side{position:sticky;top:110px}
+.how .side p{color:var(--tx2);font-size:17px;margin-top:26px;max-width:380px}
+.tl{position:relative;padding-left:clamp(28px,4vw,56px)}
+.tl-rail{position:absolute;left:0;top:10px;bottom:10px;width:2px;background:rgba(255,255,255,.07);overflow:hidden}
+.tl-fill{position:absolute;inset:0;transform-origin:50% 0;transform:scaleY(0);background:linear-gradient(180deg,rgba(var(--acc-rgb),0),var(--acc) 30%,#f3dcae)}
+.tl-dot{position:absolute;left:-5px;top:10px;width:12px;height:12px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 5px rgba(var(--acc-rgb),.18),0 0 24px 4px rgba(var(--acc-rgb),.7);will-change:transform}
+.ts{position:relative;display:grid;grid-template-columns:clamp(90px,10vw,160px) minmax(0,1fr);gap:clamp(16px,2.4vw,36px);align-items:start;padding:clamp(26px,3.4vw,44px) 0;border-bottom:1px solid var(--line)}
+.ts:first-child{padding-top:0}
+.ts .num{position:relative;font:800 clamp(56px,7vw,112px)/.85 var(--head);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.2)}
+.ts .num:after{content:attr(data-n);position:absolute;left:0;top:0;color:var(--acc);-webkit-text-stroke:0;text-shadow:0 0 28px rgba(var(--acc-rgb),.7),0 0 70px rgba(var(--acc-rgb),.3);opacity:0;transition:opacity .9s var(--ease)}
+.ts.on .num:after{opacity:1}
+.ts h4{font:800 clamp(19px,1.9vw,28px)/1.12 var(--head);letter-spacing:-.03em}
+.ts p{color:var(--tx2);font-size:clamp(15.5px,1.2vw,17px);margin-top:12px;max-width:520px}
+.ts .tag{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:9px 13px;transition:color .6s,border-color .6s}
+.ts .tag:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.ts.on .tag{color:var(--acc);border-color:rgba(var(--acc-rgb),.4)}
+
+/* FAQ строками */
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,7vw,120px);align-items:start}
+.faq dl{border-top:1px solid var(--line)}.faq dl>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:30px;padding:26px 0;border-bottom:1px solid var(--line)}
+.faq dt{font:800 16px/1.4 var(--head);letter-spacing:-.01em}.faq dd{color:var(--tx2)}
+
+/* КОНТАКТЫ: фото ворот бокса, живой статус, карта по кнопке */
+.ct{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,5vw,80px);align-items:center;background:var(--bg2)}
+.ct dl{margin-top:40px;display:grid;gap:24px}.ct dt{font:600 11px/1 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--mut)}.ct dd{font:600 clamp(18px,1.6vw,23px)/1.35 var(--body);margin-top:8px}
+.ct dd small{display:block;font:500 14px/1.4 var(--body);color:var(--mut);margin-top:4px}
+.ct .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.gate{position:relative;min-height:clamp(480px,70vh,660px);border-radius:16px;overflow:hidden;background:#0b0b0d;isolation:isolate}
+.gate>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.gate:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(8,8,10,.85),transparent 40%),linear-gradient(180deg,rgba(8,8,10,.55),transparent 25%)}
+.gtop{position:absolute;z-index:4;top:16px;left:16px;right:16px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;pointer-events:none}
+.chip2{display:flex;align-items:center;gap:9px;background:rgba(8,8,10,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:9px 13px;font:700 12px/1 var(--body);letter-spacing:.06em;color:#dcdfd6}
+.chip2 i{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 12px #4ade80;animation:blinkdot 2.6s ease-in-out infinite}
+.chip2.cl i{background:#f59e0b;box-shadow:0 0 12px #f59e0b}
+@keyframes blinkdot{50%{opacity:.35}}
+.gcap{position:absolute;z-index:3;left:20px;bottom:86px;font:800 clamp(18px,1.8vw,24px)/1.2 var(--head);letter-spacing:-.02em}
+.gcap small{display:block;font:500 14px/1.4 var(--body);color:var(--tx2);margin-top:6px;letter-spacing:0}
+.g-btns{position:absolute;z-index:4;left:16px;right:16px;bottom:16px;display:flex;gap:8px}.g-btns .btn{height:50px;padding:0 16px;font-size:13px}
+.gate iframe{position:absolute;inset:0;z-index:6;width:100%;height:100%;border:0}
+.g-x{position:absolute;z-index:7;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:0;background:var(--tx);color:var(--bg);font-size:24px;line-height:1;cursor:pointer;display:none}
+.gate.live .g-x{display:block}
+footer.ft{padding:30px var(--pad) 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+/* ОКНО ЗАПИСИ: выбор канала. data-book открывает, data-msg задаёт текст, data-sub подсказку */
+html.lock{overflow:hidden}
+.bk{position:fixed;inset:0;z-index:300;display:grid;grid-template-columns:minmax(0,1fr);place-items:center;padding:20px;visibility:hidden;pointer-events:none;transition:visibility 0s .5s}
+.bk.on{visibility:visible;pointer-events:auto;transition:none}
+.bk-bg{position:absolute;inset:0;background:rgba(0,0,0,.72);opacity:0;transition:opacity .45s ease}.bk.on .bk-bg{opacity:1}
+.bk-card{position:relative;width:min(440px,100%);overflow:hidden;isolation:isolate;border-radius:18px;background:rgba(255,255,255,.1);box-shadow:0 40px 120px -30px #000;opacity:0;transform:translate3d(0,26px,0) scale(.97);transition:opacity .45s ease,transform .6s var(--ease)}
+.bk.on .bk-card{opacity:1;transform:none}
+.bk-card:before{content:"";position:absolute;left:50%;top:50%;width:170%;aspect-ratio:1;z-index:-2;background:conic-gradient(from 0deg,transparent 0 60%,rgba(var(--acc-rgb),.06) 70%,rgba(var(--acc-rgb),.36) 79%,rgba(255,225,170,.16) 84%,transparent 90%);transform:translate(-50%,-50%);animation:glowspin 11s linear infinite}
+@keyframes glowspin{to{transform:translate(-50%,-50%) rotate(1turn)}}
+.bk:not(.on) .bk-card:before{animation-play-state:paused}
+.bk-card:after{content:"";position:absolute;inset:1px;z-index:-1;border-radius:17px;background:radial-gradient(120% 70% at 50% 0%,#1c1a16 0,#0b0b0d 55%,#070708 100%)}
+.bk-in{position:relative;padding:30px 26px 24px;max-height:calc(100dvh - 40px);overflow-y:auto;overscroll-behavior:contain}
+.bk-x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cfd2ca;font-size:22px;line-height:1;cursor:pointer}
+.bk-grab{display:none}
+.bk-k{display:block;font:600 11px var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--mut)}
+.bk-in h3{font:800 21px/1.2 var(--head);letter-spacing:-.02em;margin:10px 50px 8px 0}
+.bk-sub{color:var(--mut);font-size:15px}
+.bk-list{display:grid;gap:8px;margin-top:22px}
+.bk-o{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);transition:background .25s,border-color .25s,transform .25s}
+.bk-o[hidden]{display:none}
+.bk-o:hover,.bk-o:focus-visible{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.3);outline:none}
+.bk-o:active{transform:scale(.98)}
+.bk-o i{width:42px;height:42px;flex-shrink:0;display:grid;place-items:center;border-radius:10px;background:var(--acc);color:var(--accInk)}
+.bk-o i svg{width:22px;height:22px}
+.bk-o span{flex:1;min-width:0}.bk-o b{display:block;font:700 16px var(--body)}
+.bk-o small{display:block;color:var(--mut);font-size:13.5px;margin-top:1px}
+.bk-o em{font-style:normal;color:var(--mut);transition:transform .25s,color .25s}.bk-o:hover em{transform:translateX(4px);color:var(--tx)}
+.bk-msg{margin-top:16px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.14);font-size:13.5px;color:var(--tx2);line-height:1.45}
+.bk-msg b{display:block;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.bk-note{min-height:20px;margin-top:10px;color:#cfd2ca;font-size:13.5px;text-align:center}
+.js .bk .bk-o{opacity:0;transform:translate3d(0,14px,0)}
+.bk.on .bk-o{opacity:1;transform:none;transition:opacity .5s ease,transform .7s var(--ease),background .25s,border-color .25s}
+.bk.on .bk-o:nth-child(1){transition-delay:.12s}.bk.on .bk-o:nth-child(2){transition-delay:.18s}.bk.on .bk-o:nth-child(3){transition-delay:.24s}.bk.on .bk-o:nth-child(4){transition-delay:.3s}
+button.bk-o{width:100%;text-align:left;cursor:pointer;color:inherit;font:inherit}
+
+/* лого: настоящий знак BLKV из карточки */
+.logo img{background:#000}
+.logo span{letter-spacing:.18em;font-size:15px}
+
+/* ===== ПЕРВЫЙ ЭКРАН. BMW из бокса, фары «зажигаются», рядом пара Kia галоген → Bi-LED ===== */
+.hero{position:relative;min-height:100svh;padding:0;overflow:hidden;isolation:isolate;background:#000}
+.hero .ph{position:absolute;inset:0 22% 0 20%;z-index:-2}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:60% 42%;filter:brightness(.32) saturate(.5);transition:filter 1.6s ease}
+.js .hero .ph img{opacity:0;transition:opacity 1.2s ease,filter 1.6s ease}
+.js .hero.go .ph img{opacity:1}
+.hero.lit .ph img{filter:brightness(.82) contrast(1.08)}
+.hero .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.75) 22%,rgba(0,0,0,.1) 50%,transparent 66%,rgba(0,0,0,.6) 88%,#000 100%),linear-gradient(0deg,rgba(8,8,10,.9),transparent 34%),linear-gradient(180deg,rgba(8,8,10,.6),transparent 20%)}
+/* свечение фары. Позицию считает JS по пропорциям фото (--hx, --hy) */
+.glow{position:absolute;z-index:-1;left:var(--hx,70%);top:var(--hy,45%);width:0;height:0;pointer-events:none;opacity:0}
+.glow i{position:absolute;left:0;top:0;transform:translate(-50%,-50%);border-radius:50%;mix-blend-mode:screen}
+.glow .core{width:clamp(140px,16vw,260px);height:clamp(80px,9vw,150px);background:radial-gradient(closest-side,rgba(255,255,255,.95),rgba(var(--cold-rgb),.55) 35%,rgba(var(--cold-rgb),.12) 70%,transparent)}
+.glow .halo{width:clamp(420px,52vw,900px);height:clamp(260px,30vw,520px);background:radial-gradient(closest-side,rgba(var(--cold-rgb),.22),rgba(var(--cold-rgb),.06) 55%,transparent)}
+.glow .streak{width:clamp(600px,90vw,1500px);height:3px;border-radius:2px;background:linear-gradient(90deg,transparent,rgba(var(--cold-rgb),.55) 40%,#fff 50%,rgba(var(--cold-rgb),.55) 60%,transparent);filter:blur(1px)}
+.hero.lit .glow{animation:ignite 1.5s linear forwards}
+.hero.lit.on .glow{opacity:1;animation:none}
+@keyframes ignite{0%{opacity:0}8%{opacity:.9}12%{opacity:.15}20%{opacity:1}25%{opacity:.4}34%{opacity:1}100%{opacity:1}}
+.hero .in-h{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:150px var(--pad) 64px;max-width:calc(560px + var(--pad))}
+.hero h1,.hero .lead{text-shadow:0 2px 30px rgba(0,0,0,.6)}
+.hero .k{color:var(--acc);margin-bottom:24px}
+.hero h1{font:800 clamp(36px,4.4vw,70px)/1 var(--head);letter-spacing:-.04em;margin:0 0 26px}
+.hero h1 .ln:nth-child(2) b{transition-delay:.12s}
+.hero .lead{font-size:clamp(17px,1.4vw,20px);color:var(--tx2);max-width:520px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0 48px;margin-top:52px;padding-top:24px;border-top:1px solid var(--line);max-width:700px}
+.facts b{display:block;font:800 20px/1.1 var(--head);letter-spacing:-.02em;white-space:nowrap}.facts b i{font-style:normal;color:var(--acc)}
+.facts small{display:block;font-size:13px;color:var(--mut);margin-top:7px}
+.js .hero .fx{opacity:0;transform:translateY(24px);transition:opacity 1.1s var(--ease),transform 1.2s var(--ease)}
+.js .hero.go .fx{opacity:1;transform:none}
+.hero .k.fx{transition-delay:.1s}.hero .lead.fx{transition-delay:.45s}.hero .cta.fx{transition-delay:.6s}.hero .facts.fx{transition-delay:.75s}
+/* выключатель света на фото */
+.lamp{position:absolute;z-index:4;left:var(--hx,70%);top:calc(var(--hy,45%) + clamp(70px,8vw,120px));transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:10px 16px 10px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(8,8,10,.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font:600 13px/1 var(--body);color:var(--tx);cursor:pointer;white-space:nowrap;transition:border-color .3s}
+.lamp:hover{border-color:rgba(var(--acc-rgb),.7)}
+.lamp .sw{position:relative;width:38px;height:22px;border-radius:99px;background:rgba(255,255,255,.14);transition:background .3s}
+.lamp .sw:after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#8a877f;transition:transform .35s var(--ease),background .3s,box-shadow .3s}
+.hero.lit .lamp .sw{background:rgba(var(--cold-rgb),.25)}
+.hero.lit .lamp .sw:after{transform:translateX(16px);background:#fff;box-shadow:0 0 12px rgba(var(--cold-rgb),.9)}
+.js .hero .lamp{opacity:0;transition:opacity .8s ease 2.4s,border-color .3s}.js .hero.go .lamp{opacity:1}
+/* карточка с настоящей парой и отзыв */
+.hcard{position:absolute;z-index:3;right:var(--pad);bottom:64px;width:min(340px,22vw);border-radius:16px;overflow:hidden;background:#0e0e11;border:1px solid rgba(255,255,255,.16);box-shadow:0 30px 70px -25px #000}
+.pair{position:relative;aspect-ratio:6/5;background:#000}
+.pair img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s ease}
+.pair img.aft{opacity:0}.pair.after img.aft{opacity:1}
+.pair .tag{position:absolute;left:12px;top:12px;font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;background:rgba(8,8,10,.8);padding:8px 10px;border-radius:7px;border:1px solid rgba(255,255,255,.14)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;margin:12px 12px 0;border-radius:12px;background:var(--bg3);position:relative}
+.seg button{position:relative;z-index:1;border:0;background:none;padding:11px 8px;border-radius:9px;font:700 13px/1 var(--body);color:var(--mut);cursor:pointer;transition:color .3s}
+.seg button.on{color:var(--accInk)}
+.seg:before{content:"";position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 6px);border-radius:9px;background:var(--acc);transition:transform .45s var(--ease)}
+.seg.r:before{transform:translateX(calc(100% + 4px))}
+.hcard .cap{padding:12px 16px 14px;font-size:13.5px;color:var(--tx2)}.hcard .cap b{color:var(--tx);font-weight:600}
+.hrev{position:absolute;z-index:3;right:var(--pad);top:116px;width:min(320px,22vw);padding:16px 18px;border-radius:14px;background:rgba(13,13,15,.86);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.hrev .st{color:var(--acc);letter-spacing:.12em;font-size:13px}
+.hrev p{font-size:14.5px;line-height:1.45;margin-top:8px;color:#e9e6df}
+.hrev small{display:block;margin-top:10px;color:var(--mut);font-size:12.5px}.hrev small b{color:var(--tx2);font-weight:600}
+.js .hero .hcard,.js .hero .hrev{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease) .9s,transform 1.1s var(--ease) .9s}
+.js .hero.go .hcard,.js .hero.go .hrev{opacity:1;transform:none}
+
+/* ===== ФИШКА: «Что не так с фарами?» Выбор проблемы → схема фары сейчас/после → услуга и цена ===== */
+.fix{background:var(--bg2)}
+.fix-top{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.fix-top p{color:var(--tx2);font-size:17px;max-width:440px}
+.fix-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(20px,4vw,60px);margin-top:56px;align-items:start}
+.sym{display:grid;gap:8px}
+.sym button{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:14px;align-items:center;text-align:left;padding:18px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:none;cursor:pointer;transition:border-color .3s,background .3s}
+.sym button:hover{border-color:rgba(255,255,255,.3)}
+.sym button.on{border-color:var(--acc);background:rgba(var(--acc-rgb),.08)}
+.sym .no{font:800 12px/1 var(--head);color:var(--mut);transition:color .3s}.sym button.on .no{color:var(--acc)}
+.sym b{display:block;font:700 16px/1.25 var(--body)}.sym small{display:block;color:var(--mut);font-size:13.5px;margin-top:4px}
+.sym em{font-style:normal;font:600 14px/1 var(--body);color:var(--tx2);white-space:nowrap}
+.res{position:sticky;top:96px;border:1px solid var(--line);border-radius:18px;background:var(--bg);overflow:hidden}
+/* схема фары: рисунок + слои проблем. data-s = проблема, .after = после работы */
+.scheme{position:relative;scroll-margin-top:88px;aspect-ratio:5/3;background:radial-gradient(90% 120% at 30% 50%,#15151a,#08080a 70%);border-bottom:1px solid var(--line);overflow:hidden}
+.scheme svg{position:absolute;left:0;right:0;top:0;width:100%;height:calc(100% - 50px)}
+.scheme .pb{opacity:0;transition:opacity .6s ease}
+.scheme .beam{transition:opacity .8s ease,transform 1s var(--ease);transform-origin:150px 180px}
+.scheme .lens{transition:fill .6s,opacity .6s}
+.scheme[data-s=dim]:not(.after) .p-dim,.scheme[data-s=fog]:not(.after) .p-fog,.scheme[data-s=matte]:not(.after) .p-matte,.scheme[data-s=drl]:not(.after) .p-drl,.scheme[data-s=crack]:not(.after) .p-crack,.scheme[data-s=aim]:not(.after) .p-aim{opacity:1}
+.scheme .b-ok{opacity:0}.scheme.after .b-ok{opacity:1}
+.scheme:not(.after) .b-ok{opacity:0}
+.scheme[data-s=dim]:not(.after) .b-weak{opacity:1}
+.scheme[data-s=aim]:not(.after) .b-up{opacity:1}
+.scheme:not(.after)[data-s=fog] .b-weak,.scheme:not(.after)[data-s=matte] .b-weak,.scheme:not(.after)[data-s=drl] .b-weak,.scheme:not(.after)[data-s=crack] .b-weak{opacity:.55}
+.scheme .ring{transition:stroke .6s,opacity .6s}
+.scheme.after .ring{stroke:#eaf2ff!important;opacity:1!important}
+.scheme .drop{animation:drip 3.4s ease-in infinite}
+.scheme .drop:nth-child(2n){animation-delay:1.1s}.scheme .drop:nth-child(3n){animation-delay:2.2s}
+@keyframes drip{0%,60%{transform:none}100%{transform:translateY(14px);opacity:0}}
+.scheme .flick{animation:flick 1.8s steps(1) infinite}
+@keyframes flick{0%,40%,60%,100%{opacity:1}45%,70%{opacity:.15}}
+.fxp{display:none}
+.scheme.photo svg{display:none}
+.scheme.photo .fxp{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s ease}
+.scheme.photo .fx-aft{opacity:0}.scheme.photo.after .fx-aft{opacity:1}
+.scheme.photo:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(8,8,10,.75),transparent 30%)}
+.sc-sw{position:absolute;left:14px;bottom:14px;z-index:2;width:min(260px,calc(100% - 28px));margin:0;background:rgba(14,14,17,.85);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.sc-lbl{position:absolute;right:16px;top:14px;z-index:2;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.res-b{padding:26px 26px 24px}
+.res-b .svc{font:600 11px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--acc)}
+.res-b h3{font:800 clamp(20px,1.9vw,26px)/1.15 var(--head);letter-spacing:-.02em;margin-top:12px}
+.res-b ul{list-style:none;display:grid;gap:8px;margin-top:16px}
+.res-b li{display:flex;gap:12px;color:var(--tx2);font-size:15px}.res-b li:before{content:"";width:6px;height:6px;margin-top:9px;border-radius:2px;background:var(--acc);flex-shrink:0}
+.res-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.res-row .pr{font:800 clamp(26px,2.4vw,34px)/1 var(--head);letter-spacing:-.03em;font-variant-numeric:tabular-nums}.res-row .pr small{font:500 14px/1 var(--body);color:var(--mut);letter-spacing:0;margin-right:6px}
+.addon{display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:10px 14px;background:none;font:600 13.5px/1.2 var(--body);color:var(--tx2);cursor:pointer;transition:background .3s,border-color .3s,color .3s}
+.addon i{width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);flex-shrink:0;transition:background .3s,border-color .3s}
+.addon.on{border-color:var(--acc);color:var(--tx)}.addon.on i{background:var(--acc);border-color:var(--acc);box-shadow:inset 0 0 0 3px var(--bg)}
+.res-b .btn{width:100%;margin-top:20px}
+.res-b .fine{font-size:13px;color:var(--mut);margin-top:12px}
+.swap{animation:swap .5s var(--ease)}
+@keyframes swap{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ===== СВЕТ ПОСЛЕ РАБОТЫ: кадры клиентов из отзывов, разной высоты ===== */
+.wg{grid-template-columns:repeat(4,minmax(0,1fr))}
+.wg .c:nth-child(3n+2){margin-top:0}.wg .c:nth-child(2n){margin-top:70px}
+.c .ph{aspect-ratio:3/4}.c.w .ph{aspect-ratio:3/4}
+.c q{display:block;color:var(--tx2);font-size:14px;margin-top:8px;quotes:"«" "»"}
+
+/* ===== ПРАЙС КАРТОЧКАМИ (набор 1, блок 4): вкладки с переезжающей подложкой, карточки встают лесенкой.
+   Свой приём: за курсором по карточке идёт пятно холодного света, как от фары ===== */
+.prc{background:var(--bg2);overflow:hidden}
+.prc:before{content:"";position:absolute;left:50%;top:-30%;width:120%;height:70%;transform:translateX(-50%);pointer-events:none;background:radial-gradient(closest-side,rgba(var(--acc-rgb),.08),transparent)}
+.prc-h{position:relative;text-align:center;max-width:720px;margin:0 auto}
+.prc-h .k{justify-content:center}.prc-h .k:after{content:"";width:28px;height:1px;background:var(--acc)}
+.prc-h p{color:var(--tx2);font-size:17px;margin:22px auto 0;max-width:520px}
+.seg2{position:relative;display:inline-flex;margin-top:30px;padding:4px;border:1px solid var(--line);border-radius:999px;background:#0b0b0d}
+.seg2 i{position:absolute;top:4px;bottom:4px;left:0;width:0;border-radius:999px;background:var(--acc);transition:transform .5s var(--ease),width .5s var(--ease)}
+.seg2 button{position:relative;z-index:1;border:0;background:none;color:var(--tx2);font:600 14.5px/1 var(--body);padding:13px 22px;border-radius:999px;cursor:pointer;transition:color .35s}
+.seg2 button.on{color:var(--accInk)}
+.pcards{position:relative;display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:14px;margin-top:48px;transition:opacity .2s,transform .2s}
+.pcards.out{opacity:0;transform:translate3d(0,8px,0)}
+.pc{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);background:#0b0b0d;border-radius:20px;padding:26px 24px 24px;overflow:hidden;isolation:isolate;animation:pcin .75s var(--ease) both;animation-delay:calc(var(--i) * .08s)}
+.js .pcards:not(.seen) .pc{animation-play-state:paused}
+@keyframes pcin{from{opacity:0;transform:translate3d(0,24px,0) scale(.985)}}
+.pc:before{content:"";position:absolute;z-index:-1;left:var(--mx,50%);top:var(--my,-20%);width:420px;height:420px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(var(--cold-rgb),.13),transparent);opacity:0;transition:opacity .4s}
+.pc:hover:before{opacity:1}
+.pc.hit{border-color:rgba(var(--acc-rgb),.45);background:linear-gradient(180deg,#17140f,#0b0b0d 55%)}
+.pc.hit:after{content:"";position:absolute;left:18px;right:18px;top:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--acc),transparent)}
+.pc-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pc-ic{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--acc)}
+.pc-ic svg{width:24px;height:24px}
+.pc-badge{font:700 10.5px/1.25 var(--body);letter-spacing:.12em;text-transform:uppercase;background:var(--acc);color:var(--accInk);border-radius:999px;padding:6px 10px}
+.pc h3{font:800 18px/1.25 var(--head);letter-spacing:-.01em;margin-top:22px}
+.pc p{color:var(--mut);font-size:14.5px;line-height:1.5;margin-top:10px;flex:1}
+.pc-t{display:inline-flex;align-self:flex-start;margin-top:14px;font:600 12px/1 var(--body);color:var(--tx2);border:1px solid var(--line);border-radius:999px;padding:7px 10px}
+.pc-price{display:flex;align-items:baseline;gap:8px;margin:22px 0 18px;padding-top:18px;border-top:1px solid var(--line);white-space:nowrap}
+.pc-price strong{font:800 clamp(28px,2.4vw,36px)/1 var(--head);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.pc-price small{color:var(--mut);font:500 14px var(--body)}
+.pc .btn{width:100%;height:50px}
+.prc-foot{text-align:center;margin-top:30px;color:var(--mut);font-size:15px}
+.prc-foot a{color:var(--tx);border-bottom:1px solid rgba(var(--acc-rgb),.6)}
+
+/* мастер */
+.master [data-img]{aspect-ratio:9/13;max-height:80vh}
+
+/* контакты: карта района из OpenStreetMap в SVG (набор, блок 24, как у Свет Науки). Главные дороги прорисовываются,
+   метка падает с отскоком, от неё расходятся круги. Живая Яндекс-карта только по кнопке */
+.gate{background:#0b0b0d}
+.mc-map-svg{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.m-bg{fill:#0d0d10}.m-land path{fill:#121216}.m-wood path{fill:#10150f}
+.m-water path{fill:#0d1620;stroke:#17283a;stroke-width:2}
+.m-path path{fill:none;stroke:#1f1f25;stroke-width:2.5;stroke-dasharray:7 7}
+.m-rail path{fill:none;stroke:#34343c;stroke-width:4;stroke-dasharray:14 10}
+.m-minor path{fill:none;stroke:#2a2a31;stroke-width:10;stroke-linecap:round;stroke-linejoin:round}
+.m-major-c path{fill:none;stroke:#18181d;stroke-width:26;stroke-linecap:round;stroke-linejoin:round}
+.m-major path{fill:none;stroke:#8a6f45;stroke-width:13;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;transition:stroke-dashoffset 2.4s var(--ease) .2s}
+.js .m-major path{stroke-dashoffset:1}.js .gate.in .m-major path{stroke-dashoffset:0}
+.m-b path{fill:#1a1a20;stroke:#26262d;stroke-width:1.5}
+.m-me path{fill:rgba(var(--acc-rgb),.45);stroke:var(--acc);stroke-width:3}
+.m-lbl text{font:600 22px var(--body);fill:#7d7a72;letter-spacing:.05em}
+.m-dot{fill:var(--acc);stroke:#0b0b0d;stroke-width:6}
+/* свечение метки градиентом, без CSS filter: Safari ломает filter на SVG-группе с анимацией */
+.m-glow{fill:url(#mGlow)}
+.m-r{fill:none;stroke:var(--acc);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+.gate.in .m-r{animation:mring 2.6s ease-out 1.8s infinite}.gate.in .m-r2{animation-delay:3.1s}
+@keyframes mring{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(4.5)}}
+.js .m-drop{opacity:0;transform:translateY(-70px);transition:opacity .5s,transform .9s cubic-bezier(.34,1.56,.64,1)}
+.js .gate.in .m-drop{opacity:1;transform:none;transition-delay:1s}
+.m-tag rect{fill:#f2efe9}.m-tag .t1{font:800 34px var(--head);fill:#0b0b0d}.m-tag .t2{font:600 23px var(--body);fill:#5a564e}
+.js .m-tag{opacity:0;transform:translateX(-12px);transition:opacity .6s,transform .8s var(--ease)}
+.js .gate.in .m-tag{opacity:1;transform:none;transition-delay:1.6s}
+.mc-osm{position:absolute;z-index:4;right:16px;top:22px;font:500 10.5px var(--body);color:#5f5c55}
+.gate.off .m-r,.gate.off .chip2 i{animation-play-state:paused}
+@media (max-width:640px){.mc-map-svg{left:-40%;width:140%}}
+
+/* нижняя панель на телефоне */
+.mbar{display:none}
+
+/* ===== ПЛАНШЕТ И ТЕЛЕФОН ===== */
+@media (max-width:980px){
+ .links{display:none}
+ .hero .ph{inset:0 0 auto 0;height:70svh}
+ .hero .ph img{object-position:62% 40%}
+ .hero .ph:after{background:linear-gradient(0deg,var(--bg) 2%,rgba(8,8,10,.4) 40%,transparent 70%),linear-gradient(180deg,rgba(8,8,10,.7),transparent 22%)}
+ .hero .in-h{min-height:0;padding-top:52svh;padding-bottom:28px;max-width:none}
+ .hcard{position:relative;right:auto;bottom:auto;width:auto;margin:0 var(--pad) 26px}
+ .pair{aspect-ratio:16/10}
+ .hrev{display:none}
+ .facts{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px}.facts b{font-size:clamp(14px,4vw,18px);white-space:normal}
+ .fix-g,.pr-g,.ct,.faq,.how,.master{grid-template-columns:minmax(0,1fr)}
+ .res{position:static}
+ .pcards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .wg{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:48px}
+ .faq dl>div{grid-template-columns:minmax(0,1fr);gap:8px}
+ .mq{height:620px}.rc{padding:16px 14px 14px}.rc p{font-size:14px}.rc .av{width:30px;height:30px;font-size:11px}
+ .how .side{position:static}.ts{grid-template-columns:minmax(0,1fr);gap:6px}.ts .num{font-size:64px}
+ .why li{grid-template-columns:minmax(0,1fr);gap:4px}
+ .lbx{flex-direction:column;gap:18px}.lbx img{max-height:70vh}
+ .mbar{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) 54px;position:fixed;z-index:60;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:8px;background:rgba(8,8,10,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .4s var(--ease)}
+ .mbar.on{transform:none}.mbar .btn{height:50px;padding:0 10px;font-size:13px}
+ body{padding-bottom:76px}
+}
+@media (max-width:640px){
+ .bk{place-items:end center;padding:0}
+ .bk-card{width:100%;border-radius:18px 18px 0 0;transform:translate3d(0,100%,0);transition:opacity .3s ease,transform .6s var(--ease)}
+ .bk-in{padding:12px 20px max(22px,env(safe-area-inset-bottom));max-height:calc(100dvh - 24px)}
+ .bk-grab{display:block;width:40px;height:4px;border-radius:4px;background:rgba(255,255,255,.2);margin:0 auto 18px}
+ .bk-x{top:22px}
+ .sym button{padding:15px 14px;gap:10px;grid-template-columns:22px minmax(0,1fr) auto}.sym em{font-size:13px}
+ .res-b{padding:22px 18px 20px}
+ .scheme{aspect-ratio:4/3}
+ .pcards{grid-template-columns:minmax(0,1fr);margin-top:36px}.seg2 button{padding:12px 15px;font-size:14px}.pc{padding:22px 20px 20px}
+}
+@media (max-width:560px){nav .btn{display:none}.hero h1{font-size:clamp(30px,9vw,42px)}.hero .cta .btn{flex:1;padding:0 12px}.score b{font-size:54px}.gate{min-height:440px}.ct .cta .btn{flex:1}.g-btns .btn{flex:1}.wg .c:nth-child(2n){margin-top:30px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.tl-dot{display:none}.tl-fill{transform:none}.ts .num:after{opacity:1}.mq{height:auto;max-height:720px;overflow:auto}.js [data-r],.js .hero .fx,.js .hero .lamp,.js .hero .hcard,.js .hero .hrev,.js .bk .bk-o{opacity:1;transform:none}.ln b,.js [data-img]>img{transform:none!important;opacity:1!important}.js .hero .ph img{opacity:1}.js [data-img]:after{transform:scaleY(0)}.hero.lit .glow{opacity:1}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<nav id="nav"><a href="#top" class="logo"><img src="img/logo.jpg" alt="" width="42" height="42"><span>BLKV</span></a>
+ <div class="links"><a href="#fix">Подбор</a><a href="#works">Работы</a><a href="#price">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></div>
+ <a class="btn a" href="#book" data-book>Записаться</a></nav>
+
+<!-- первый экран: BMW с «ангельскими глазками» из бокса (как на эскизе), фары включаются -->
+<header class="hero" id="top">
+ <div class="ph"><img id="heroImg" src="img/hero.jpg" alt="BMW с ангельскими глазками в боксе BLKV" width="853" height="1280" fetchpriority="high"></div>
+ <div class="glow" id="glow" aria-hidden="true"><i class="halo"></i><i class="streak"></i><i class="core"></i></div>
+ <button class="lamp" type="button" id="lamp" aria-pressed="true"><span class="sw"></span><span id="lampT">Выключить свет</span></button>
+ <div class="in-h">
+  <p class="k fx">Автосвет · Звенигородское шоссе</p>
+  <h1><span class="ln"><b>Би-лед линзы</b></span><span class="ln"><b>и ремонт фар</b></span></h1>
+  <p class="lead fx">Ставим Bi-LED под ключ, чиним ДХО и «глазки», убираем запотевание. Цену называем до начала работ, и по ходу она не меняется.</p>
+  <div class="cta fx"><a class="btn a shine" href="#book" data-book data-msg="Здравствуйте! Я с сайта, хочу записаться. Машина: ">Записаться</a><a class="btn o" href="#fix">Что не так с фарами?</a></div>
+  <div class="facts fx"><div><b>4,8 <i>★</i></b><small>20 оценок на Картах</small></div><div><b>10–20</b><small>ежедневно</small></div><div><b>от 20 000 ₽</b><small>Bi-LED под ключ</small></div></div>
+ </div>
+ <div class="hrev"><div class="st">★★★★★</div><p>Отдал машину, к вечеру уже всё было готово под ключ. Фары отполированы идеально, зазоры выставлены в завод</p><small><b>Даниил Смирнов</b> · отзыв на Яндекс Картах</small></div>
+ <div class="hcard">
+  <div class="pair after" id="pair"><img class="bef" src="img/kia-before.jpg" alt="Kia с галогеновыми фарами до замены"><img class="aft" src="img/kia-after.jpg" alt="Та же Kia после установки Bi-LED"><span class="tag" id="pairTag">Bi-LED</span></div>
+  <div class="seg r" id="seg" role="group" aria-label="Сравнить свет"><button type="button" data-v="0">Галоген</button><button type="button" class="on" data-v="1">Bi-LED</button></div>
+  <p class="cap"><b>Kia клиентки</b> · «Меняла галогенку на би лед! Разница космическая!»</p>
+ </div>
+</header>
+
+<main>
+<!-- ФИШКА: подбор по проблеме. Услуги и цены из карточки студии -->
+<section class="fix" id="fix">
+ <div class="fix-top"><div><div class="k" data-r>Подбор</div><h2>Что не так<br><em>с фарами?</em></h2></div>
+  <p data-r>Выберите, что беспокоит. Покажем, что с этим делаем, сколько стоит, и соберём сообщение Александру.</p></div>
+ <div class="fix-g">
+  <div class="sym" id="sym" role="radiogroup" aria-label="Что беспокоит" data-r></div>
+  <div class="res" data-r>
+   <div class="scheme" id="scheme" data-s="dim" aria-hidden="true">
+    <span class="sc-lbl" id="scLbl">Сейчас</span>
+    <!-- фото фары: появятся сами, когда в img/ будут fix-after.jpg и fix-<проблема>.jpg (промпты в промпты-фары.md) -->
+    <img class="fxp fx-now" id="fxNow" alt=""><img class="fxp fx-aft" alt="" id="fxAft">
+    <svg viewBox="0 0 600 360" fill="none">
+     <defs>
+      <linearGradient id="bOk" x1="0" x2="1"><stop offset="0" stop-color="#eef4ff" stop-opacity=".75"/><stop offset=".6" stop-color="#cfdcff" stop-opacity=".18"/><stop offset="1" stop-color="#cfdcff" stop-opacity="0"/></linearGradient>
+      <linearGradient id="bWeak" x1="0" x2="1"><stop offset="0" stop-color="#ffcf7a" stop-opacity=".45"/><stop offset=".5" stop-color="#ffcf7a" stop-opacity=".08"/><stop offset="1" stop-color="#ffcf7a" stop-opacity="0"/></linearGradient>
+      <radialGradient id="lOk"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#dfe9ff"/><stop offset="1" stop-color="#8ea6d8" stop-opacity=".2"/></radialGradient>
+      <radialGradient id="lWarm"><stop offset="0" stop-color="#ffe2a8"/><stop offset=".6" stop-color="#c99442" stop-opacity=".6"/><stop offset="1" stop-color="#6b4a1e" stop-opacity=".1"/></radialGradient>
+      <filter id="soft"><feGaussianBlur stdDeviation="6"/></filter><filter id="frost"><feGaussianBlur stdDeviation="2.5"/></filter>
+      <clipPath id="glass"><path d="M70 130 Q90 100 160 96 L300 96 Q330 98 330 130 L322 226 Q318 254 288 256 L120 262 Q72 262 64 220 Z"/></clipPath>
+     </defs>
+     <!-- лучи: нормальный с ровной границей, слабый жёлтый, задранный вверх -->
+     <path class="beam b-ok" d="M300 150 L600 120 L600 150 L470 158 L600 205 L600 300 L300 230 Z" fill="url(#bOk)"/>
+     <line class="beam b-ok" x1="300" y1="150" x2="600" y2="120" stroke="#fff" stroke-opacity=".25"/>
+     <path class="beam pb b-weak" d="M300 165 L520 150 L520 255 L300 220 Z" fill="url(#bWeak)"/>
+     <path class="beam pb b-up" d="M300 150 L600 10 L600 160 L300 220 Z" fill="url(#bOk)"/>
+     <!-- корпус фары -->
+     <path d="M70 130 Q90 100 160 96 L300 96 Q330 98 330 130 L322 226 Q318 254 288 256 L120 262 Q72 262 64 220 Z" fill="#101014" stroke="rgba(255,255,255,.28)" stroke-width="2"/>
+     <g clip-path="url(#glass)">
+      <!-- линзы -->
+      <circle cx="150" cy="180" r="42" fill="#0a0a0c" stroke="rgba(255,255,255,.18)"/>
+      <circle cx="250" cy="180" r="36" fill="#0a0a0c" stroke="rgba(255,255,255,.18)"/>
+      <circle class="lens" cx="150" cy="180" r="24" fill="url(#lOk)"/>
+      <circle class="lens" cx="250" cy="180" r="20" fill="url(#lOk)"/>
+      <circle class="lens pb p-dim" cx="150" cy="180" r="24" fill="url(#lWarm)"/>
+      <circle class="lens pb p-dim" cx="250" cy="180" r="20" fill="url(#lWarm)"/>
+      <!-- «глазки» -->
+      <circle class="ring" cx="150" cy="180" r="34" stroke="#eaf2ff" stroke-width="4"/>
+      <circle class="ring" cx="250" cy="180" r="30" stroke="#eaf2ff" stroke-width="4"/>
+      <circle class="ring" cx="150" cy="180" r="34" stroke="#eaf2ff" stroke-width="10" opacity=".25" filter="url(#soft)"/>
+      <!-- ДХО полосой -->
+      <path class="ring" d="M84 128 Q100 112 160 110 L300 110" stroke="#eaf2ff" stroke-width="3" stroke-linecap="round"/>
+      <!-- проблема: разный цвет и мигает ДХО -->
+      <g class="pb p-drl"><circle cx="250" cy="180" r="30" stroke="#ffb347" stroke-width="6"/><circle cx="250" cy="180" r="30" stroke="#ffb347" stroke-width="14" opacity=".35" filter="url(#soft)"/><path class="flick" d="M84 128 Q100 112 160 110 L300 110" stroke="#101014" stroke-width="5" stroke-linecap="round" stroke-dasharray="40 26"/></g>
+      <!-- проблема: мутное жёлтое стекло -->
+      <rect class="pb p-matte" x="40" y="80" width="320" height="200" fill="#c8a96a" fill-opacity=".38" filter="url(#frost)"/>
+      <!-- проблема: конденсат -->
+      <g class="pb p-fog"><rect x="40" y="80" width="320" height="200" fill="#9fb3c8" fill-opacity=".22"/>
+       <g fill="#d8e6f5" fill-opacity=".75"><circle class="drop" cx="110" cy="128" r="3"/><circle class="drop" cx="190" cy="140" r="2.4"/><circle class="drop" cx="230" cy="120" r="3.4"/><circle class="drop" cx="280" cy="150" r="2.2"/><circle class="drop" cx="130" cy="230" r="2.8"/><circle class="drop" cx="210" cy="236" r="3"/><circle class="drop" cx="300" cy="210" r="2.6"/><circle class="drop" cx="90" cy="190" r="2.2"/><circle class="drop" cx="175" cy="210" r="2"/></g></g>
+      <!-- проблема: трещина -->
+      <path class="pb p-crack" d="M300 100 L262 146 L276 156 L228 214 L242 222 L196 262 M262 146 L236 140 M228 214 L204 206" stroke="#fff" stroke-opacity=".8" stroke-width="2"/>
+     </g>
+     <!-- проблема: регулировка, слепит встречных -->
+     <g class="pb p-aim"><path d="M470 60 l14 -14 M500 74 l20 -6 M486 40 l4 -20" stroke="#ffcf7a" stroke-width="3" stroke-linecap="round"/></g>
+    </svg>
+    <div class="seg sc-sw" id="scSeg" role="group" aria-label="Схема фары"><button type="button" class="on" data-v="0">Сейчас</button><button type="button" data-v="1">После</button></div>
+   </div>
+   <div class="res-b" id="resB" aria-live="polite"></div>
+  </div>
+ </div>
+</section>
+
+<!-- работы: кадры из отзывов клиентов на Картах -->
+<section id="works"><div class="k" data-r>Работы</div><h2>Как светит<br><em>после нас</em></h2>
+ <div class="wg">
+  <button type="button" class="c" data-t="Bi-LED на трассе" data-p="Фото клиента из отзыва на Картах"><div class="ph" data-img><img src="img/road-snow.jpg" alt="Свет Bi-LED на зимней дороге в лесу" loading="lazy" style="object-position:40% 50%"></div><h3>Bi-LED на трассе</h3><q>Сделал всё на высшем уровне</q></button>
+  <button type="button" class="c" data-t="Дьявольские глазки" data-p="Фото клиента из отзыва на Картах"><div class="ph" data-img><img src="img/infiniti.jpg" alt="Infiniti с дьявольскими глазками в боксе" loading="lazy" style="object-position:50% 60%"></div><h3>Дьявольские глазки</h3><q>Работу выполнили качественно, быстро, по приемлемой цене</q></button>
+  <button type="button" class="c" data-t="Лазерные линзы и туманки" data-p="Фото клиента из отзыва на Картах"><div class="ph" data-img><img src="img/road-night.jpg" alt="Свет фар на ночной дороге" loading="lazy" style="object-position:50% 50%"></div><h3>Линзы и туманки</h3><q>Свет теперь просто космос</q></button>
+  <button type="button" class="c" data-t="Установка линз" data-p="Фото клиента из отзыва на Картах"><div class="ph" data-img><img src="img/beam-wall.jpg" alt="Свет фар на стене здания ночью" loading="lazy" style="object-position:50% 60%"></div><h3>Установка линз</h3><q>Всё на высшем уровне, цена-качество</q></button>
+ </div>
+</section>
+
+<!-- прайс вкладками. Цены из карточки студии на Картах -->
+<section class="prc" id="price">
+ <div class="prc-h"><div class="k" data-r>Цены</div><h2>Сколько<br><em>стоит</em></h2>
+  <p data-r>Цены «от» из карточки студии на Яндекс Картах. Точную сумму назовём по модели машины до начала работ.</p>
+  <div class="seg2" id="ptabs" role="tablist" aria-label="Группы услуг" data-r><i aria-hidden="true"></i><button type="button" role="tab" class="on" aria-selected="true" data-k="0">Свет</button><button type="button" role="tab" aria-selected="false" data-k="1">Ремонт</button><button type="button" role="tab" aria-selected="false" data-k="2">Внешний вид</button></div></div>
+ <div class="pcards" id="plist"></div>
+ <p class="prc-foot" data-r>На все работы гарантия. Не знаете, что нужно? <a href="#book" data-book data-msg="Здравствуйте! Я с сайта. Пришлю фото фары, подскажите, что с ней сделать. Машина: " data-sub="Пришлите фото фары днём и как светит вечером, подскажем.">Пришлите фото фары</a>, подскажем.</p>
+</section>
+
+<!-- мастер -->
+<section class="master" id="master">
+ <figure><div data-img><img src="img/master.jpg" alt="Александр с отремонтированной фарой BMW" loading="lazy"></div><figcaption>Александр, мастер BLKV</figcaption></figure>
+ <div><div class="k" data-r>Мастер</div><h2>Александр<br><em>и BLKV</em></h2>
+  <p class="big" data-r>Сначала разбираемся, что именно не так и какие компоненты подойдут под вашу машину. <em>Потом называем цену, и по ходу работ она не меняется.</em></p>
+  <ul class="why" data-r>
+   <li><b>Цена не меняется</b><span>«Изначально была озвучена стоимость, и по итогу она не изменилась».</span></li>
+   <li><b>За день</b><span>«Отдал машину, к вечеру уже всё было готово под ключ».</span></li>
+   <li><b>Всё в наличии</b><span>«Приехал, поставил, уехал, светит бомба».</span></li>
+   <li><b>На связи после</b><span>«Чуть позже без проблем подрегулировал угол наклона линз».</span></li>
+  </ul></div>
+</section>
+
+<!-- отзывы с Яндекс Карт -->
+<section id="reviews"><div class="rv-h"><div><div class="k" data-r>Отзывы</div><h2>Что говорят<br><em>клиенты</em></h2></div><div class="score" data-r><b>4,8</b><span><i>★★★★★</i><br>20 оценок, 15 отзывов<br>на Яндекс Картах</span></div></div>
+ <div class="mq" id="mq" aria-label="Отзывы клиентов с Яндекс Карт"></div>
+ <div class="rv-foot" data-r><span>Отзывы с Яндекс Карт, некоторые сокращены.</span><a class="btn o" href="https://yandex.ru/maps/org/136634259206/reviews/" target="_blank" rel="noopener">Все отзывы на Картах</a></div>
+</section>
+
+<!-- этапы -->
+<section class="how" id="how"><div class="side"><div class="k" data-r>Как записаться</div><h2>От сообщения<br><em>до света</em></h2>
+  <p data-r>Можно начать с фото фары. Цену знаете заранее.</p></div>
+ <div class="tl" id="tl"><span class="tl-rail"><i class="tl-fill" id="tlFill"></i></span><span class="tl-dot" id="tlDot"></span>
+  <div class="ts"><span class="num" data-n="01">01</span><div><h4>Пишете или звоните</h4><p>Марка машины и что беспокоит. Пришлите фото фары днём и как она светит вечером, так быстрее.</p><span class="tag">Telegram, WhatsApp, Max или звонок</span></div></div>
+  <div class="ts"><span class="num" data-n="02">02</span><div><h4>Подбираем и называем цену</h4><p>Подскажем, какие линзы и компоненты подойдут. Цена и срок до начала работ.</p><span class="tag">Цена не меняется</span></div></div>
+  <div class="ts"><span class="num" data-n="03">03</span><div><h4>Делаем</h4><p>Регулировка 20–30 минут. Линзы часто ставим за день: утром отдали, вечером забрали.</p><span class="tag">Часто за день</span></div></div>
+  <div class="ts"><span class="num" data-n="04">04</span><div><h4>Проверяем свет вместе</h4><p>Выставляем границу света, чтобы не слепить встречных. Если потом что-то подправить, пишите.</p><span class="tag">Гарантия на работы</span></div></div>
+ </div></section>
+
+<!-- вопросы. Ответы продублированы в JSON-LD FAQPage в head -->
+<section class="faq" id="faq"><div><div class="k" data-r>Коротко</div><h2>Вопросы<br><em>и ответы</em></h2></div>
+ <dl>
+  <div data-r><dt>Сколько стоят Bi-LED линзы?</dt><dd>Установка Bi-LED под ключ от 20 000 ₽: разбираем фары, ставим модули с переходными рамками и собираем герметично. Точную цену назовём по модели машины до начала работ.</dd></div>
+  <div data-r><dt>Сколько времени занимает работа?</dt><dd>Регулировка света 20–30 минут. Линзы часто успеваем за день: утром отдали машину, к вечеру забрали. Точный срок скажем при записи.</dd></div>
+  <div data-r><dt>Фары запотевают, что делать?</dt><dd>Приезжайте на диагностику, она бесплатная. Найдём причину: уплотнители, осушители, трещины, крепления. Восстановление герметичности от 7 000 ₽.</dd></div>
+  <div data-r><dt>Есть гарантия?</dt><dd>Да, на работы даём гарантию. Срок зависит от работы, скажем при записи.</dd></div>
+  <div data-r><dt>Где вы находитесь?</dt><dd>Звенигородское шоссе, 33-й километр, 2, посёлок Летний Отдых, Одинцовский округ. Ежедневно с 10:00 до 20:00.</dd></div>
+ </dl></section>
+
+<!-- контакты -->
+<section class="ct" id="contacts"><div><div class="k" data-r>Контакты</div><h2>Приезжайте<br><em>на Звенигородку</em></h2>
+  <dl data-r><div><dt>Адрес</dt><dd>Звенигородское шоссе, 33-й км, 2<small>Посёлок Летний Отдых, Одинцовский округ</small></dd></div><div><dt>Режим</dt><dd>Ежедневно 10:00–20:00</dd></div><div><dt>Телефон</dt><dd><a href="tel:+79951182607">+7 (995) 118-26-07</a><small>На этом номере звонок, <a href="https://wa.me/79951182607" target="_blank" rel="noopener">WhatsApp</a> и <a href="https://max.ru/u/f9LHodD0cOInFZahajUGxndU4QHU-3QPquoGbF4ta5MS1500GnY4IenWfS0" target="_blank" rel="noopener">Max</a>. Telegram: <a href="https://t.me/BLKV_LIGHT" target="_blank" rel="noopener">@BLKV_LIGHT</a></small></dd></div></dl>
+  <div class="cta" data-r><a class="btn a" href="#book" data-book>Записаться</a><a class="btn o" href="tel:+79951182607">Позвонить</a></div></div>
+ <div class="gate" id="gate" data-r>
+  <svg class="mc-map-svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<defs><radialGradient id="mGlow"><stop offset="0" stop-color="#c9a063" stop-opacity=".7"/><stop offset=".45" stop-color="#c9a063" stop-opacity=".25"/><stop offset="1" stop-color="#c9a063" stop-opacity="0"/></radialGradient></defs><rect width="1600" height="1100" class="m-bg"/>
+<g class="m-land"><path d="M-71 -50L-122 -113L-142 -222L-77 -242L-42 -151L21 -175L40 -147L77 -178L159 -125L190 -91L188 -77L252 -38L218 -4L44 -44L-71 -50Z"/><path d="M275 -61L166 -137L189 -171L258 -179L324 -152L347 -129L275 -61Z"/><path d="M-215 -3L-142 117L-75 286L-160 328L-349 371L-466 82L-478 -6L-215 -3Z"/><path d="M-157 -10L-76 -29L46 -25L27 44L-33 118L-64 87L-79 54L-148 41L-157 -10Z"/><path d="M804 927L843 939L874 949L965 957L966 1004L944 1134L899 1131L841 1099L794 1024L789 986L804 927Z"/><path d="M1025 911L1044 907L1111 1004L1196 1144L1332 1381L1270 1401L1182 1294L1164 1295L1048 1184L1038 1088L1025 998L1025 911Z"/><path d="M935 718L961 790L961 858L957 952L853 933L711 836L657 796L610 788L553 790L496 731L477 683L473 646L476 630L482 616L508 579L522 562L715 376L935 718Z"/><path d="M1104 903L1046 812L1050 779L1074 733L1108 751L1118 732L1150 753L1122 805L1153 824L1189 778L1232 823L1222 865L1179 947L1201 964L1212 952L1237 967L1280 913L1317 985L1271 1059L1289 1072L1310 1039L1374 1105L1368 1127L1322 1205L1291 1236L1184 1060L1098 916L1104 903Z"/><path d="M153 1200L266 1132L351 1264L238 1332L153 1200Z"/><path d="M-252 941L-421 688L-276 613L-223 692L-229 695L-123 857L-252 941Z"/><path d="M122 1188L9 1260L-198 945L-89 887L122 1188Z"/><path d="M-90 864L-274 592L-159 519L22 790L-90 864Z"/><path d="M-74 883L43 824L250 1113L135 1184L-74 883Z"/><path d="M141 933L93 866L97 859L233 724L292 773L141 933Z"/><path d="M-176 1368L-354 1073L-267 1029L-282 999L-213 955L-10 1267L-176 1368Z"/><path d="M146 939L299 776L366 843L257 971L244 1041L207 1023L146 939Z"/><path d="M54 807L86 749L67 723L131 613L152 601L202 656L202 686L229 716L85 858L54 807Z"/><path d="M1433 -319L1447 -427L1532 -416L1531 -404L1614 -394L1588 -345L1548 -353L1540 -301L1433 -319Z"/><path d="M1453 1116L1428 1158L1427 1196L1556 1246L1635 1263L2065 1344L2083 1232L1453 1116Z"/><path d="M1433 -304L1558 -277L1619 -216L1639 -236L1680 -76L1429 -277L1433 -304Z"/><path d="M233 -357L231 -352L225 -345L200 -325L172 -306L158 -299L148 -294L144 -294L139 -299L126 -320L121 -326L113 -331L102 -334L88 -335L75 -332L58 -325L42 -316L35 -310L27 -302L15 -286L10 -275L6 -265L3 -255L3 -250L5 -245L13 -233L18 -216L21 -212L28 -210L52 -209L63 -206L69 -202L69 -199L68 -193L63 -185L57 -177L50 -171L46 -169L38 -169L22 -176L16 -178L8 -178L-13 -174L-21 -174L-28 -177L-37 -184L-42 -192L-55 -219L-63 -226L-74 -233L-84 -237L-95 -238L-146 -233L-150 -234L-155 -236L-164 -244L-168 -251L-172 -260L-179 -287L-185 -315L-186 -344L-190 -357L-197 -374L-205 -385L-211 -391L-225 -401L-228 -405L-231 -410L-235 -421L-237 -434L-237 -444L-236 -452L-231 -469L-222 -486L-195 -528L-186 -540L-180 -546L-174 -549L-158 -552L-133 -555L-117 -553L-105 -550L-88 -544L-23 -515L-1 -507L49 -491L59 -488L71 -487L73 -486L77 -483L84 -474L92 -469L139 -457L149 -453L157 -450L168 -442L193 -423L209 -409L218 -399L224 -390L228 -380L233 -364L233 -357Z"/></g><g class="m-wood"><path d="M545 513L666 405L649 292L655 279L510 52L414 160L243 16L221 23L199 30L161 55L141 127L166 162L211 211L292 311L328 301L440 418L502 384L531 396L524 437L498 473L545 513Z"/><path d="M768 309L776 288L803 292L796 281L789 253L763 220L765 198L751 187L714 120L686 51L656 37L585 -159L569 -188L549 -162L493 -179L476 -224L536 -230L540 -256L468 -397L477 -536L504 -846L480 -873L528 -972L468 -1004L423 -981L425 -950L479 -949L456 -904L411 -879L369 -847L369 -802L339 -793L310 -823L308 -907L346 -916L341 -950L300 -948L286 -1022L266 -1021L274 -938L236 -926L237 -910L273 -910L286 -803L214 -771L194 -738L472 -111L742 330L768 309Z"/><path d="M1609 -380L1598 -340L1586 -297L1605 -254L1632 -247L1609 -380Z"/><path d="M710 1034L753 1042L766 1038L776 1027L790 1027L838 1106L892 1134L896 1147L896 1161L899 1174L909 1185L939 1194L953 1196L953 1210L939 1233L935 1247L935 1262L943 1274L941 1289L926 1283L917 1272L904 1264L889 1260L877 1249L872 1236L862 1226L849 1230L828 1250L824 1264L816 1274L767 1234L772 1220L782 1208L796 1204L821 1193L827 1180L821 1165L813 1152L802 1143L787 1143L772 1144L758 1142L755 1128L763 1116L764 1102L754 1091L740 1090L725 1093L709 1089L705 1074L710 1034Z"/><path d="M2128 1193L2088 1203L2079 1201L2061 1194L2052 1188L2050 1178L2055 1170L2050 1161L1934 1141L1930 1132L1937 1125L1957 1126L1965 1121L1956 1113L1951 1105L1948 1085L1939 1081L1781 1061L1771 1057L1752 1057L1742 1055L1736 1046L1735 1036L1740 1027L1749 1023L1759 1018L1769 1018L1798 1026L2040 1065L2050 1066L2070 1060L2079 1062L2087 1070L2096 1075L2105 1073L2114 1076L2120 1084L2119 1103L2138 1124L2146 1128L2151 1136L2154 1146L2150 1155L2151 1165L2158 1182L2156 1191L2148 1198L2138 1198L2128 1193Z"/><path d="M90 -203L85 -210L81 -214L74 -219L65 -222L58 -222L34 -219L27 -220L22 -223L17 -230L15 -235L14 -243L17 -258L26 -282L34 -297L42 -308L51 -315L62 -320L81 -325L95 -326L103 -324L110 -319L114 -313L123 -299L127 -294L136 -287L139 -283L138 -280L134 -276L107 -261L97 -255L83 -242L78 -236L77 -232L79 -228L92 -210L95 -207L95 -205L93 -203L90 -203Z"/></g><g class="m-water"><path d="M390 793L426 753L441 736L441 704L361 630L290 549L284 530L201 462L201 442L167 417L123 412L109 428L107 453L108 473L180 559L258 598L263 645L282 642L303 659L320 721L346 734L339 760L356 783L390 793Z"/><path d="M98 321L117 369L109 396L106 406L71 432L55 430L53 416L13 368L-21 351L-32 349L-79 386L-118 385L-165 424L-191 420L-198 410L-217 409L-229 393L-239 386L-236 375L-202 370L-150 343L-123 347L-79 314L-69 274L-80 230L-78 217L-90 202L-85 162L-104 120L-129 92L-129 78L-118 65L-105 64L-78 78L-76 99L-53 136L-44 194L-27 227L-25 246L10 284L39 283L55 297L98 321Z"/><path d="M463 767L677 876L762 1014"/><path d="M439 757L463 767"/><path d="M1594 320L1603 315L1612 320L1621 321L1633 324L1643 341L1630 359L1618 360L1610 364L1615 374L1610 382L1592 387L1572 376L1557 363L1560 353L1567 342L1572 332L1587 323L1594 320Z"/><path d="M769 1026L834 1133L952 1230"/><path d="M762 1014L769 1026"/><path d="M-624 431L-611 434L-516 464L-437 426L-362 401L-350 393L-308 380L-229 393L-7 318L109 428L253 550L361 682L426 753L439 757"/><path d="M1091 -86L1087 -93L1074 -111L1068 -115L1062 -120L1055 -121L1048 -120L1043 -115L1042 -108L1055 -100L1066 -92L1072 -88L1078 -84L1084 -82L1086 -82L1091 -86Z"/><path d="M1210 -165L1204 -178L1192 -187L1179 -190L1165 -190L1151 -198L1138 -202L1109 -198L1097 -190L1092 -178L1096 -149L1103 -137L1105 -123L1115 -114L1129 -117L1143 -115L1157 -110L1171 -110L1185 -115L1199 -115L1224 -104L1233 -115L1239 -143L1232 -156L1210 -165Z"/><path d="M946 -430L1024 -454L1059 -341L970 -312L941 -410L946 -430Z"/><path d="M1368 -444L1348 -337L1409 -325L1427 -436L1368 -444Z"/><path d="M1289 -460L1267 -349L1332 -337L1353 -449L1289 -460Z"/><path d="M1216 -473L1191 -360L1253 -349L1278 -464L1216 -473Z"/><path d="M13 -166L-17 -154L-17 -150L-12 -139L-10 -139L17 -149L23 -156L20 -165L13 -166Z"/></g>
+<g class="m-path"><path d="M954 -276L908 -293L883 -301L861 -304"/><path d="M335 583L334 577L341 562L341 544L338 529"/><path d="M312 539L310 551L341 562L389 610L433 624L448 625L471 625"/><path d="M700 279L690 284L682 289"/><path d="M84 436L124 403"/><path d="M220 26L208 33L189 43L173 56L164 66L155 86L151 103L148 124L152 129L187 140"/><path d="M155 364L135 347"/><path d="M155 364L131 383"/><path d="M819 149L786 175L780 177L770 182L759 187L736 148L723 131L712 163L705 223L689 262L700 279"/><path d="M75 443L79 449L95 475L134 510L152 552L222 602L225 617L204 665"/><path d="M84 436L75 443L72 445L27 482L-48 543L-109 591"/><path d="M187 140L138 305L135 318L135 334L135 347L135 350L135 365L131 383L129 394L124 403"/><path d="M187 140L220 26L221 23L220 12"/><path d="M1826 -227L1801 -236L1782 -246L1758 -254L1727 -255"/><path d="M318 48L473 -44L484 -48"/><path d="M-161 510L-201 492L-255 468L-259 466L-328 435L-343 428"/><path d="M682 289L649 432"/><path d="M353 1001L367 932"/><path d="M451 1121L470 1103L488 1096L544 1037"/><path d="M420 1121L437 1118L451 1121L478 1126L527 1135"/><path d="M312 993L353 1001L379 1006L544 1037"/><path d="M348 1109L339 1163L335 1186"/><path d="M329 1147L339 1163"/><path d="M305 1101L323 1136"/><path d="M339 1163L299 1153L320 1144"/><path d="M320 1144L323 1146L326 1147L329 1147L331 1145L332 1142L332 1139L330 1137L328 1135L326 1135L323 1136L321 1137L320 1139L320 1142L320 1144"/><path d="M261 1129L270 1124L276 1120"/><path d="M239 1079L246 1081L254 1082"/><path d="M331 1200L299 1153L276 1120L271 1113L257 1092L255 1087L254 1082L266 1003L271 987L278 972L385 856"/><path d="M470 898L410 906L381 895"/><path d="M910 348L1259 554L1469 680"/><path d="M1233 820L1236 812L1237 812L1229 795L1167 710L1135 677L1122 673L1105 674L1083 687L1059 708L1049 724L1036 751"/><path d="M861 -304L736 -265L657 -225L621 -179L601 -158L591 -153L592 -143"/><path d="M1382 1108L1365 1090L1350 1059L1339 1017L1336 981L1332 958L1324 950L1299 930L1284 888L1266 847L1236 812"/><path d="M900 333L871 342L855 343L847 340L836 340L820 326L800 317L745 347L733 328L700 279"/><path d="M1388 747L1473 767"/><path d="M1167 710L1388 747L1469 680"/><path d="M1259 554L1450 513"/><path d="M723 131L734 125"/><path d="M677 37L687 32"/><path d="M592 -143L600 -146"/><path d="M355 -289L371 -249"/><path d="M109 -1090L150 -913L191 -751L206 -706L371 -324L382 -300"/><path d="M382 -300L368 -295L355 -289"/><path d="M592 -143L566 -166L531 -176L503 -181L470 -184L432 -187"/><path d="M382 -300L432 -187"/><path d="M-29 411L-5 398"/><path d="M-52 391L-41 386L-30 386L-5 398L19 423L7 435L18 445L4 458"/><path d="M-40 410L-52 391L-116 425L-121 441L-119 459L-114 471"/><path d="M27 482L4 458L-16 442L-23 433L-29 411L-40 410"/><path d="M-40 410L-114 471L-81 508L-72 514L-62 512L4 458"/><path d="M-34 553L77 459"/><path d="M72 445L77 459L112 554L113 570L102 609L99 612L84 623L81 624L78 624L35 608L22 599L5 582L-34 553L-48 543"/><path d="M547 56L588 37L623 33L662 27L677 37"/><path d="M388 -155L414 -157"/><path d="M432 -187L440 -169"/><path d="M414 -157L425 -162L440 -169"/><path d="M1292 1252L1291 1244L1236 1155L1185 1067L1157 1018L1034 808"/><path d="M982 -278L992 -249L1016 -228L1046 -221L1083 -230L1119 -228L1164 -213L1223 -196"/><path d="M982 -278L954 -276"/><path d="M-161 510L-212 435L-259 466L-324 508"/><path d="M744 321L733 328"/><path d="M1977 -104L1928 -197L1889 -236L1809 -297L1752 -323L1743 -395L1752 -557L1731 -594L1730 -727L1797 -800L1777 -874L1733 -912L1681 -1087L1670 -1167"/></g><g class="m-rail"><path d="M-7684 -8334L-8012 -8211L-8116 -8180L-8166 -8163L-8210 -8146L-8271 -8117L-8304 -8098L-8334 -8073L-8367 -8042L-8395 -8008L-8418 -7973L-8443 -7936L-8464 -7895L-8469 -7885L-8477 -7869L-8493 -7838L-8515 -7786L-8517 -7782L-8526 -7757L-8541 -7709L-8557 -7641L-8570 -7578L-8600 -7406L-8609 -7298L-8603 -7193L-8576 -7066L-8549 -6972L-8503 -6890L-8453 -6807L-8371 -6703L-8267 -6606L-8161 -6516L-7503 -5976L-7084 -5615L-6925 -5479L-6796 -5372L-6716 -5328L-6610 -5277L-6515 -5246L-6409 -5221L-6238 -5201L-6086 -5186L-5975 -5182L-5825 -5180L-5670 -5173L-5587 -5164L-5506 -5153L-5362 -5121L-5325 -5109L-5238 -5080L-5000 -4989L-4785 -4912L-4639 -4860L-4547 -4826L-4206 -4702L-3833 -4565L-3351 -4386L-2894 -4218L-2443 -4052L-2174 -3953L-2046 -3909L-1935 -3876L-1768 -3834L-1586 -3803L-1518 -3793L-1105 -3735L-684 -3678L-483 -3651L-283 -3626L-269 -3624L-133 -3607L-39 -3590L59 -3564L201 -3500L316 -3430L417 -3342L480 -3264L547 -3145L629 -2978L684 -2874L757 -2755L786 -2630L800 -2497L790 -2382L776 -2243L598 -1200L521 -773L502 -635L501 -515L510 -396L577 -205L601 -158L684 8L770 182L809 251L847 340L923 521L956 628L984 761L994 847L999 890L1002 1015L979 1190L958 1342L930 1494L888 1608L829 1727L702 1923L662 1992L625 2071L598 2152L573 2255L564 2381L565 2450L578 2544L597 2638L599 2651L608 2686L611 2698L636 2803L661 2924L669 2995L674 3046L675 3110L640 3298L499 3885L408 4298L356 4528"/><path d="M762 180L734 125L687 32L600 -146L596 -154"/></g>
+<g class="m-minor"><path d="M1283 1266L1292 1252L1347 1178L1382 1108L1419 1041L1440 951L1473 767L1477 746"/><path d="M1477 746L1477 705L1469 680L1462 648L1450 513L1453 465L1481 388L1522 337L1627 232L1654 205L1742 116L1824 36L1833 28"/><path d="M1654 205L1642 192L1544 87L1457 -137L1374 -177L1223 -196L1121 -287"/><path d="M1034 808L1038 798L1040 788L1039 767L1036 751L1013 649L980 537L930 388L910 348L900 333L819 149L802 114L760 20L861 -304"/><path d="M861 -304L953 -544L1074 -696L1083 -759"/><path d="M108 1423L9 1271L-209 942"/><path d="M-209 942L-85 882"/><path d="M245 1088L239 1079L170 981L140 940L84 863L58 827L46 814"/><path d="M-85 882L136 1193L236 1342"/><path d="M264 1117L270 1124L275 1130L294 1156L327 1203L339 1222L365 1263L372 1274"/><path d="M264 1117L271 1113L286 1103L295 1100L305 1101L348 1109L361 1112L420 1121L401 1233"/><path d="M220 12L61 -31L29 -34L-67 -37L-197 -11L-208 -11L-349 -12L-485 -13"/><path d="M1477 746L1518 753L1532 755L1556 759L1520 964L1735 1000L1817 1014L1861 1022L1907 1029L1996 1044L2041 1052L2061 1053L2081 1044L2094 1023L2112 886L2110 870L2092 856L2068 850L2029 843L1939 827L1894 819L1851 812L1773 798L1556 759"/><path d="M140 940L303 768"/><path d="M84 863L238 716"/><path d="M-85 882L-140 801L-275 601L-282 592L-304 560"/><path d="M-161 510L-282 592"/><path d="M278 -50L164 -127L111 -160L156 -196L201 -234L234 -263L313 -322L348 -340"/><path d="M204 665L214 694L238 716L303 768L384 840L386 848L385 856L381 895L378 919L367 932L312 993L278 972L271 967"/><path d="M797 458L744 488L731 496L712 463L666 465L604 530L621 546"/><path d="M596 967L544 1037L527 1135L535 1147L518 1263"/><path d="M494 900L542 931L581 957"/><path d="M245 -10L318 48"/><path d="M-140 801L-81 763L-20 720"/><path d="M829 1366L864 1383L899 1327L850 1311L795 1271L720 1210L707 1178L687 1111L686 1102L689 1066L684 1025"/><path d="M156 -196L164 -127"/><path d="M460 1248L478 1126"/><path d="M580 1154L621 1176L667 1190L686 1210L720 1210"/><path d="M535 1147L580 1154L562 1275"/><path d="M361 1112L379 1006"/><path d="M312 993L295 1100"/><path d="M378 919L387 926L398 935L450 945"/><path d="M476 888L470 898L460 915"/><path d="M447 869L476 888L494 900"/><path d="M615 979L684 1025"/><path d="M581 957L596 967L615 979"/><path d="M391 832L447 869"/><path d="M1518 753L1530 674"/><path d="M1405 1114L1410 1129L1419 1196L1433 1207L1531 1241L1547 1249L1622 1269L2098 1357"/><path d="M2112 1234L1464 1111L1422 1105L1405 1114L1382 1108"/><path d="M1520 964L1505 1050L1707 1086L1720 1065L1717 1038L1735 1000L1773 798L1788 715L1798 699L1821 701L1980 726"/><path d="M1627 232L1635 240L1696 310L1738 331L1715 386L1849 419L1856 426L1853 450L1844 451L1699 426L1703 393L1715 386"/><path d="M1703 393L1671 417L1623 462L1599 516L1560 512L1554 511"/><path d="M1699 426L1685 468L1682 500L1741 516L1751 527L1747 564L1762 592L1751 681L1571 651L1594 541L1599 516"/><path d="M1594 541L1678 557"/><path d="M1554 511L1471 504L1450 513"/><path d="M684 1025L714 1028L825 1009L838 1007L881 1000L882 981L885 957L873 952L832 948L823 939L798 937"/><path d="M832 948L828 974L825 1009"/><path d="M828 974L882 981"/><path d="M825 1009L835 1035L849 1053L867 1064L880 1059L891 1043L895 1035L893 1021L887 1009L881 1000"/><path d="M881 1000L906 978"/><path d="M887 1009L899 1015L924 1017"/><path d="M895 1035L920 1060"/><path d="M880 1059L890 1090"/><path d="M838 1007L867 1032"/><path d="M1556 759L1571 674"/><path d="M-200 575L-81 763"/><path d="M-85 882L46 814"/><path d="M846 434L838 415L804 362L793 369L757 392"/><path d="M801 463L829 445L846 434L881 488L887 514"/><path d="M318 48L399 117"/><path d="M170 981L194 961L243 912"/><path d="M46 814L36 803L-20 720L-109 591L-161 510"/><path d="M-67 -37L-88 -60L-125 -109"/><path d="M-101 230L-92 254L-90 263L-91 269"/><path d="M-197 -11L-190 46L-166 90L-156 101L-123 169L-101 230"/><path d="M418 -180L405 -170L388 -155"/><path d="M388 -155L278 -50L245 -10L228 7L220 12"/><path d="M1021 822L1034 808"/><path d="M1457 -137L1462 -164L1493 -211"/><path d="M1742 116L1733 95L1694 4L1657 -70L1493 -211L1422 -272L1427 -311L1558 -288L1563 -283L1619 -230"/><path d="M36 803L62 764"/><path d="M1493 -211L1563 -283"/><path d="M1502 -413L1620 -400L1619 -380L1563 -283"/></g><g class="m-major-c"><path d="M945 697L801 463L797 458L757 392"/><path d="M-490 1577L-334 1482L-290 1456L-176 1390L9 1271L20 1264L136 1193L264 1117"/><path d="M467 701L466 656L467 641L471 625L478 607L489 590L502 573L575 506L649 432L672 409"/><path d="M1352 1756L1354 1510L1351 1414L1348 1396L1341 1374L1333 1354L1313 1318L1283 1266L1171 1074L1044 862L1021 822L984 761L945 697"/><path d="M264 1117L252 1098L245 1088L246 1081L255 1018L260 993L271 967L307 927"/><path d="M672 409L723 359L732 351"/><path d="M1777 46L1745 -33L1716 -116L1696 -187L1685 -246L1672 -383L1666 -506L1669 -596L1677 -683L1682 -767L1672 -863L1652 -960L1624 -1062L1576 -1180L1519 -1274L1448 -1369L1368 -1453L1286 -1521L1209 -1572L1100 -1631L997 -1673L812 -1723L718 -1738"/><path d="M715 -1726L809 -1710L993 -1660L1100 -1615L1208 -1557L1286 -1506L1365 -1438L1442 -1357L1511 -1261L1563 -1174L1610 -1056L1638 -958L1658 -859L1666 -769L1660 -683L1654 -593L1652 -502L1659 -377L1671 -246L1683 -183L1705 -107L1734 -27L1768 53"/><path d="M307 927L339 891"/><path d="M339 891L357 870L384 840L391 832"/><path d="M419 798L441 771"/><path d="M391 832L401 820L419 798"/><path d="M441 771L454 754L460 743L463 736L466 721L467 701"/><path d="M530 28L484 -48L457 -91L425 -162L418 -180L372 -286L368 -295L348 -340L231 -610L188 -711L164 -797L137 -911L96 -1089L65 -1224L-11 -1612L-42 -1740"/><path d="M757 392L734 355L732 351L690 284L547 56L530 28"/></g><g class="m-major"><path pathLength="1" d="M945 697L801 463L797 458L757 392"/><path pathLength="1" d="M-490 1577L-334 1482L-290 1456L-176 1390L9 1271L20 1264L136 1193L264 1117"/><path pathLength="1" d="M467 701L466 656L467 641L471 625L478 607L489 590L502 573L575 506L649 432L672 409"/><path pathLength="1" d="M1352 1756L1354 1510L1351 1414L1348 1396L1341 1374L1333 1354L1313 1318L1283 1266L1171 1074L1044 862L1021 822L984 761L945 697"/><path pathLength="1" d="M264 1117L252 1098L245 1088L246 1081L255 1018L260 993L271 967L307 927"/><path pathLength="1" d="M672 409L723 359L732 351"/><path pathLength="1" d="M1777 46L1745 -33L1716 -116L1696 -187L1685 -246L1672 -383L1666 -506L1669 -596L1677 -683L1682 -767L1672 -863L1652 -960L1624 -1062L1576 -1180L1519 -1274L1448 -1369L1368 -1453L1286 -1521L1209 -1572L1100 -1631L997 -1673L812 -1723L718 -1738"/><path pathLength="1" d="M715 -1726L809 -1710L993 -1660L1100 -1615L1208 -1557L1286 -1506L1365 -1438L1442 -1357L1511 -1261L1563 -1174L1610 -1056L1638 -958L1658 -859L1666 -769L1660 -683L1654 -593L1652 -502L1659 -377L1671 -246L1683 -183L1705 -107L1734 -27L1768 53"/><path pathLength="1" d="M307 927L339 891"/><path pathLength="1" d="M339 891L357 870L384 840L391 832"/><path pathLength="1" d="M419 798L441 771"/><path pathLength="1" d="M391 832L401 820L419 798"/><path pathLength="1" d="M441 771L454 754L460 743L463 736L466 721L467 701"/><path pathLength="1" d="M530 28L484 -48L457 -91L425 -162L418 -180L372 -286L368 -295L348 -340L231 -610L188 -711L164 -797L137 -911L96 -1089L65 -1224L-11 -1612L-42 -1740"/><path pathLength="1" d="M757 392L734 355L732 351L690 284L547 56L530 28"/></g>
+<g class="m-b"><path d="M389 1221L339 1212L356 1125L363 1126L364 1120L369 1121L368 1127L405 1134L399 1166L377 1162L373 1184L395 1188L389 1221Z"/><path d="M1635 861L1677 867L1687 800L1753 810L1725 993L1657 983L1666 922L1629 916L1620 974L1548 964L1575 782L1645 792L1635 861Z"/><path d="M291 965L346 907L356 897L370 910L362 919L346 936L329 953L313 970L305 979L291 965Z"/><path d="M278 990L297 993L296 1005L292 1030L288 1055L284 1079L283 1092L263 1089L278 990Z"/><path d="M336 1007L355 1010L340 1100L321 1097L323 1086L327 1063L330 1041L334 1018L336 1007Z"/><path d="M993 759L990 747L997 745L1001 757L993 759Z"/><path d="M121 132L113 158L130 163L139 137L121 132Z"/><path d="M243 -185L237 -196L257 -207L263 -196L243 -185Z"/><path d="M476 1240L478 1228L482 1204L485 1179L489 1155L491 1143L512 1146L497 1244L476 1240Z"/><path d="M538 1138L540 1126L544 1103L547 1080L551 1056L553 1045L573 1048L559 1141L538 1138Z"/><path d="M418 1230L420 1218L424 1193L428 1169L431 1145L433 1133L454 1136L439 1233L418 1230Z"/><path d="M535 1250L537 1238L540 1214L544 1190L548 1165L550 1153L570 1156L555 1253L535 1250Z"/><path d="M380 1111L395 1019L416 1023L401 1114L380 1111Z"/><path d="M1580 1002L1715 1025L1707 1071L1572 1048L1580 1002Z"/><path d="M1595 651L1607 568L1757 590L1745 672L1595 651Z"/><path d="M395 864L386 885L413 897L422 877L395 864Z"/><path d="M396 939L393 958L410 962L408 972L448 979L450 967L466 970L469 951L453 949L451 959L415 952L417 943L396 939Z"/><path d="M481 933L562 988L573 971L563 964L553 958L543 951L533 944L523 937L513 930L503 923L493 916L481 933Z"/><path d="M642 1019L602 1054L614 1068L627 1057L658 1093L685 1070L660 1040L652 1030L642 1019Z"/><path d="M884 521L895 538L887 543L876 526L884 521Z"/><path d="M805 322L818 344L789 361L786 363L773 341L805 322Z"/><path d="M843 443L880 501L866 510L829 452L832 450L843 443Z"/><path d="M773 490L813 555L798 564L758 499L773 490Z"/><path d="M767 679L754 660L817 618L830 637L767 679Z"/><path d="M893 825L817 773L807 788L883 840L893 825Z"/><path d="M733 819L829 885L818 902L721 837L733 819Z"/><path d="M764 775L876 853L848 894L735 815L764 775Z"/><path d="M690 676L760 581L778 594L708 690L690 676Z"/><path d="M693 782L680 799L634 765L646 747L693 782Z"/><path d="M707 729L686 758L658 737L679 709L707 729Z"/><path d="M584 770L574 783L526 748L535 735L584 770Z"/><path d="M575 706L626 744L610 766L558 728L575 706Z"/><path d="M599 700L577 684L584 675L588 678L603 658L613 665L609 671L617 676L599 700Z"/><path d="M659 691L629 732L594 707L624 665L659 691Z"/><path d="M614 638L665 567L685 582L693 571L678 561L705 524L754 560L669 678L614 638Z"/><path d="M615 592L570 655L541 634L548 624L504 592L523 566L527 569L551 536L569 549L565 555L615 592Z"/><path d="M690 410L704 426L686 443L672 427L690 410Z"/><path d="M1127 1106L1142 1092L1151 1102L1137 1116L1127 1106Z"/><path d="M431 1103L429 1110L419 1108L420 1101L431 1103Z"/><path d="M441 1101L458 1104L456 1112L440 1109L441 1101Z"/><path d="M209 1080L195 1090L187 1079L202 1069L209 1080Z"/><path d="M228 1084L242 1106L227 1116L219 1104L224 1101L218 1091L228 1084Z"/><path d="M286 1193L273 1200L261 1181L274 1173L286 1193Z"/><path d="M249 1168L244 1158L257 1150L263 1161L249 1168Z"/><path d="M260 961L247 975L230 959L243 945L260 961Z"/><path d="M290 928L262 958L252 948L280 919L290 928Z"/><path d="M446 928L457 930L455 940L444 937L446 928Z"/><path d="M642 1019L649 1013L667 1034L660 1040L652 1030L642 1019Z"/><path d="M1445 1038L1465 1042L1476 986L1456 982L1445 1038Z"/><path d="M1535 739L1546 671L1563 674L1552 742L1535 739Z"/><path d="M668 33L671 39L664 43L661 37L668 33Z"/><path d="M1448 1064L1443 1097L1484 1103L1489 1071L1448 1064Z"/><path d="M1498 1072L1492 1101L1527 1108L1533 1079L1498 1072Z"/><path d="M1588 449L1611 452L1607 488L1584 485L1588 449Z"/><path d="M1625 497L1699 509L1693 543L1620 531L1625 497Z"/><path d="M1701 437L1737 445L1725 502L1689 494L1701 437Z"/><path d="M1686 552L1682 571L1734 581L1738 562L1686 552Z"/><path d="M1763 329L1754 379L1836 395L1845 344L1763 329Z"/><path d="M1707 400L1703 419L1848 445L1851 425L1707 400Z"/><path d="M1717 282L1705 309L1723 318L1735 291L1717 282Z"/><path d="M1688 345L1705 348L1698 383L1680 379L1688 345Z"/><path d="M817 1015L824 1025L836 1043L854 1063L871 1076L861 1094L851 1088L858 1079L842 1065L818 1038L807 1021L817 1015Z"/><path d="M855 1025L846 1021L846 1030L847 1039L851 1045L860 1050L868 1053L878 1052L885 1045L888 1038L890 1029L886 1021L880 1012L872 1009L863 1008L852 1012L860 1022L865 1019L871 1019L875 1021L877 1025L880 1030L878 1036L874 1043L869 1044L863 1042L858 1040L856 1036L854 1030L855 1025Z"/><path d="M880 1073L873 1079L870 1086L870 1097L875 1103L881 1108L889 1110L897 1110L904 1106L910 1100L911 1091L910 1083L904 1075L894 1070L890 1070L890 1079L896 1080L900 1085L902 1091L898 1098L893 1101L885 1100L880 1095L880 1088L884 1079L880 1073Z"/><path d="M902 1047L900 1058L902 1067L908 1075L919 1080L931 1078L937 1072L941 1063L940 1052L934 1045L928 1041L921 1040L911 1041L916 1050L920 1049L925 1049L929 1053L932 1060L931 1066L925 1071L919 1071L912 1068L910 1061L912 1054L902 1047Z"/><path d="M913 1019L905 1021L908 1030L915 1035L922 1039L930 1039L938 1033L943 1027L945 1017L945 1010L939 1004L931 998L921 998L912 1002L906 1010L915 1014L917 1008L922 1007L930 1007L935 1012L937 1016L935 1021L932 1027L926 1029L920 1028L915 1024L913 1019Z"/><path d="M900 987L896 996L904 1000L912 1000L919 995L925 990L927 984L927 973L924 966L918 961L908 958L900 960L893 964L889 971L887 979L889 987L897 983L896 979L896 973L900 970L902 966L909 966L914 969L918 972L920 980L918 985L912 991L905 991L900 987Z"/><path d="M836 953L883 958L881 976L833 971L836 953Z"/><path d="M833 981L876 985L876 995L850 993L850 997L831 996L833 981Z"/><path d="M782 994L783 1005L822 1003L825 945L796 942L795 934L827 936L828 926L785 924L786 942L810 953L810 993L782 994Z"/><path d="M903 820L891 838L931 862L942 844L903 820Z"/><path d="M778 712L764 726L782 744L796 731L778 712Z"/><path d="M758 697L748 696L746 750L771 750L771 740L757 740L758 697Z"/><path d="M494 609L480 627L497 640L511 622L494 609Z"/><path d="M517 630L508 642L528 656L537 644L517 630Z"/><path d="M-165 551L-148 575L-162 584L-178 561L-165 551Z"/><path d="M-119 618L-103 641L-116 649L-132 627L-119 618Z"/><path d="M-145 726L-129 751L-143 760L-159 735L-145 726Z"/><path d="M-40 744L-34 754L-51 765L-57 755L-40 744Z"/><path d="M-93 781L-88 790L-93 793L-95 790L-109 798L-107 802L-112 805L-117 797L-113 794L-114 792L-98 783L-97 784L-93 781Z"/><path d="M-76 812L-67 825L-87 837L-95 824L-76 812Z"/><path d="M-17 770L-7 784L-35 804L-45 789L-17 770Z"/><path d="M-75 684L-59 708L-73 718L-89 693L-75 684Z"/><path d="M125 838L133 848L116 864L117 866L108 875L98 863L125 838Z"/><path d="M97 807L104 814L85 833L78 825L97 807Z"/><path d="M166 799L176 810L158 828L147 817L166 799Z"/><path d="M134 767L143 777L122 797L114 789L126 778L124 777L134 767Z"/><path d="M186 718L193 728L172 742L165 733L186 718Z"/><path d="M202 763L211 772L194 788L185 779L202 763Z"/><path d="M224 736L244 753L237 761L217 743L224 736Z"/><path d="M341 839L350 849L335 864L325 854L341 839Z"/><path d="M293 793L302 803L294 811L285 801L293 793Z"/><path d="M252 760L264 772L265 770L278 783L268 793L254 779L250 782L240 772L252 760Z"/><path d="M253 835L262 843L248 860L239 852L253 835Z"/><path d="M92 920L102 935L93 942L82 927L92 920Z"/><path d="M215 881L223 888L209 903L201 896L215 881Z"/><path d="M177 921L184 928L169 944L162 937L177 921Z"/><path d="M148 889L156 897L140 915L131 907L148 889Z"/><path d="M222 806L232 815L217 831L207 823L222 806Z"/><path d="M187 848L194 855L175 874L168 866L187 848Z"/><path d="M298 890L309 900L294 915L284 905L298 890Z"/><path d="M217 979L227 987L208 1007L199 999L217 979Z"/><path d="M167 1041L177 1056L165 1064L155 1049L167 1041Z"/><path d="M156 1008L165 1021L154 1028L145 1015L156 1008Z"/><path d="M80 1043L86 1052L73 1061L67 1052L80 1043Z"/><path d="M67 1008L75 1020L55 1035L46 1023L67 1008Z"/><path d="M133 976L141 988L130 996L122 983L133 976Z"/><path d="M117 947L126 960L112 970L102 957L117 947Z"/><path d="M-65 953L-54 971L-67 980L-79 963L-65 953Z"/><path d="M-50 996L-43 1007L-55 1015L-63 1005L-50 996Z"/><path d="M-34 1031L-20 1052L-38 1065L-53 1043L-34 1031Z"/><path d="M-64 1113L-50 1104L-40 1119L-55 1128L-64 1113Z"/><path d="M-138 1104L-133 1115L-148 1122L-154 1111L-138 1104Z"/><path d="M-173 1048L-167 1060L-180 1067L-186 1055L-173 1048Z"/><path d="M-157 848L-147 863L-165 874L-175 859L-157 848Z"/><path d="M297 -115L304 -107L293 -96L286 -104L297 -115Z"/><path d="M323 -142L333 -131L321 -119L310 -131L323 -142Z"/><path d="M65 -132L73 -125L68 -117L59 -124L65 -132Z"/><path d="M76 -73L86 -64L74 -52L64 -61L76 -73Z"/><path d="M129 -53L138 -49L133 -35L124 -39L129 -53Z"/><path d="M165 -46L176 -40L170 -27L158 -32L165 -46Z"/><path d="M185 -40L195 -35L186 -16L176 -21L185 -40Z"/><path d="M210 -29L218 -25L212 -14L204 -19L210 -29Z"/><path d="M216 -45L221 -54L229 -49L224 -41L216 -45Z"/><path d="M97 -153L112 -145L102 -124L87 -132L97 -153Z"/><path d="M127 -110L138 -101L127 -87L116 -96L127 -110Z"/><path d="M250 -108L260 -101L251 -88L241 -95L250 -108Z"/><path d="M197 -135L208 -127L201 -117L190 -125L197 -135Z"/><path d="M156 -98L167 -90L161 -82L150 -89L156 -98Z"/><path d="M-80 -19L-67 -17L-69 -3L-82 -5L-80 -19Z"/><path d="M-125 -6L-110 -7L-109 7L-124 9L-125 -6Z"/><path d="M4 29L16 36L7 50L-5 43L4 29Z"/><path d="M-14 5L-1 8L-7 32L-20 29L-14 5Z"/><path d="M-43 -19L-29 -17L-32 -1L-46 -4L-43 -19Z"/><path d="M13 -14L22 -12L19 2L10 1L13 -14Z"/><path d="M51 -89L59 -83L50 -71L42 -76L51 -89Z"/><path d="M21 -72L32 -67L28 -57L17 -61L21 -72Z"/><path d="M-48 -73L-32 -72L-32 -68L-26 -67L-26 -54L-49 -55L-48 -73Z"/><path d="M-100 -107L-53 -116L-50 -98L-96 -90L-100 -107Z"/><path d="M1169 852L1176 856L1170 867L1163 863L1169 852Z"/><path d="M1093 853L1102 868L1095 872L1086 857L1093 853Z"/><path d="M1079 777L1091 784L1082 800L1070 793L1079 777Z"/><path d="M1050 941L1057 953L1048 958L1041 946L1050 941Z"/><path d="M1036 903L1054 926L1049 930L1031 907L1036 903Z"/><path d="M1030 928L1037 921L1045 928L1038 935L1030 928Z"/><path d="M1140 943L1147 951L1139 957L1133 950L1140 943Z"/><path d="M1119 894L1127 902L1119 910L1111 902L1119 894Z"/><path d="M1171 969L1179 979L1161 994L1153 985L1171 969Z"/><path d="M1123 1076L1128 1082L1120 1089L1115 1084L1123 1076Z"/><path d="M1114 1056L1121 1065L1114 1071L1107 1063L1114 1056Z"/><path d="M1098 1017L1109 1011L1114 1020L1103 1026L1098 1017Z"/><path d="M1086 992L1096 1001L1087 1011L1077 1002L1086 992Z"/><path d="M1065 989L1070 996L1062 1003L1057 995L1065 989Z"/><path d="M1229 968L1238 976L1229 987L1219 979L1229 968Z"/><path d="M1182 990L1193 1000L1182 1012L1171 1002L1182 990Z"/><path d="M1234 1100L1242 1108L1233 1118L1224 1110L1234 1100Z"/><path d="M1232 1053L1243 1062L1226 1085L1215 1077L1232 1053Z"/><path d="M1259 1124L1267 1134L1251 1147L1243 1137L1259 1124Z"/><path d="M1312 1158L1324 1169L1317 1176L1305 1165L1312 1158Z"/><path d="M1301 1124L1313 1135L1301 1147L1289 1136L1301 1124Z"/><path d="M1606 1165L1619 1167L1617 1179L1604 1176L1606 1165Z"/><path d="M135 1159L127 1148L143 1136L151 1146L135 1159Z"/><path d="M99 1100L91 1089L103 1080L111 1091L99 1100Z"/><path d="M33 1006L22 992L34 982L45 997L33 1006Z"/><path d="M10 974L0 961L7 956L10 960L24 950L31 959L10 974Z"/><path d="M-6 945L-19 929L-7 920L6 936L-6 945Z"/><path d="M-27 917L-37 905L-28 898L-18 910L-27 917Z"/><path d="M-45 892L-51 882L-40 875L-34 885L-45 892Z"/><path d="M97 1184L82 1193L74 1180L89 1171L97 1184Z"/><path d="M66 1176L60 1165L76 1156L82 1166L66 1176Z"/><path d="M47 1140L36 1125L47 1116L58 1131L47 1140Z"/><path d="M27 1109L18 1097L29 1088L38 1100L27 1109Z"/><path d="M7 1076L-8 1059L3 1050L18 1067L7 1076Z"/><path d="M-91 955L-97 944L-87 939L-81 950L-91 955Z"/><path d="M-100 927L-105 917L-92 911L-87 920L-100 927Z"/><path d="M-114 918L-117 911L-115 910L-118 903L-107 897L-103 905L-100 904L-97 910L-114 918Z"/><path d="M21 443L13 436L19 429L27 436L21 443Z"/><path d="M188 1135L176 1118L189 1109L201 1127L188 1135Z"/><path d="M222 1035L225 1035L227 1034L229 1032L230 1030L230 1027L228 1025L226 1023L223 1023L220 1024L218 1026L218 1028L218 1031L219 1034L222 1035Z"/><path d="M175 659L169 666L159 657L154 663L144 655L162 635L167 639L161 646L175 659Z"/><path d="M-14 717L-18 711L-13 708L-9 714L-14 717Z"/><path d="M48 897L68 885L76 898L56 910L48 897Z"/><path d="M18 853L13 845L30 836L34 843L18 853Z"/><path d="M52 883L44 870L53 864L61 877L52 883Z"/><path d="M-110 -136L-116 -155L-84 -165L-78 -146L-110 -136Z"/><path d="M-108 -50L-118 -62L-109 -70L-99 -58L-108 -50Z"/><path d="M-153 -6L-143 -7L-142 2L-152 4L-153 -6Z"/><path d="M-133 263L-114 255L-109 266L-127 274L-133 263Z"/><path d="M-146 -153L-141 -134L-158 -129L-164 -147L-146 -153Z"/><path d="M-125 295L-98 285L-95 294L-122 304L-125 295Z"/><path d="M-138 232L-142 220L-126 214L-121 226L-138 232Z"/><path d="M-138 177L-129 199L-142 204L-151 182L-138 177Z"/><path d="M-162 172L-167 158L-149 151L-144 165L-162 172Z"/><path d="M-176 130L-182 116L-169 111L-163 125L-176 130Z"/><path d="M1523 -229L1515 -221L1527 -208L1536 -216L1523 -229Z"/><path d="M1439 -296L1437 -275L1455 -273L1457 -293L1439 -296Z"/><path d="M1674 1165L1701 1168L1699 1188L1671 1185L1674 1165Z"/><path d="M1498 -286L1516 -284L1514 -265L1496 -267L1498 -286Z"/><path d="M-26 575L-2 596L-17 614L-41 592L-26 575Z"/><path d="M1479 1153L1489 1156L1485 1169L1475 1166L1479 1153Z"/><path d="M1566 -370L1566 -353L1583 -352L1583 -369L1566 -370Z"/><path d="M1539 -346L1537 -333L1525 -335L1526 -348L1539 -346Z"/><path d="M1551 -195L1557 -188L1547 -178L1540 -185L1551 -195Z"/><path d="M-35 1171L-19 1163L-12 1176L-28 1184L-35 1171Z"/><path d="M-156 985L-146 978L-150 972L-142 966L-133 979L-152 992L-156 985Z"/></g><g class="m-me"><path d="M834 434L825 439L823 441L791 388L800 382L802 381L834 434Z"/></g>
+<g class="m-lbl"><path id="rl0" d="M-42 -1740L-11 -1612L65 -1224L96 -1089L137 -911L164 -797L188 -711L231 -610L348 -340L368 -295L372 -286L418 -180L425 -162L457 -91L484 -48L530 28" fill="none"/><text><textPath href="#rl0" startOffset="50%" text-anchor="middle">Малое кольцо</textPath></text><path id="rl1" d="M-490 1577L-334 1482L-290 1456L-176 1390L9 1271L20 1264L136 1193L264 1117" fill="none"/><text><textPath href="#rl1" startOffset="50%" text-anchor="middle">Звенигородская ул.</textPath></text><path id="rl2" d="M467 701L466 656L467 641L471 625L478 607L489 590L502 573L575 506L649 432L672 409" fill="none"/><text><textPath href="#rl2" startOffset="50%" text-anchor="middle">Зелёная ул.</textPath></text><path id="rl3" d="M-209 942L9 1271L108 1423" fill="none"/><text><textPath href="#rl3" startOffset="50%" text-anchor="middle">Кооперативная ул.</textPath></text><path id="rl4" d="M46 814L58 827L84 863L140 940L170 981L239 1079L245 1088" fill="none"/><text><textPath href="#rl4" startOffset="50%" text-anchor="middle">Октябрьская ул.</textPath></text><path id="rl5" d="M-85 882L136 1193L236 1342" fill="none"/><text><textPath href="#rl5" startOffset="50%" text-anchor="middle">Первомайская ул.</textPath></text><path id="rl6" d="M718 -1738L812 -1723L997 -1673L1100 -1631L1209 -1572L1286 -1521L1368 -1453L1448 -1369L1519 -1274L1576 -1180L1624 -1062L1652 -960L1672 -863L1682 -767L1677 -683L1669 -596L1666 -506L1672 -383L1685 -246L1696 -187L1716 -116L1745 -33L1777 46" fill="none"/><text><textPath href="#rl6" startOffset="50%" text-anchor="middle">ЦКАД</textPath></text></g>
+<g class="m-pin" transform="translate(800 396)"><g class="m-drop"><circle class="m-glow" r="56"/><circle class="m-r" r="22"/><circle class="m-r m-r2" r="22"/><circle class="m-dot" r="20"/><circle r="7" fill="#fff"/></g></g>
+<g transform="translate(844 332)"><g class="m-tag"><rect width="330" height="100" rx="20"/><text x="28" y="44" class="t1">BLKV</text><text x="28" y="78" class="t2">автосвет · 33-й км</text></g></g>
+</svg><a class="mc-osm" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a>
+  <div class="gtop"><span class="chip2" id="live"><i></i><span>Открыто</span></span></div>
+  <p class="gcap">Звенигородское шоссе, <span style="white-space:nowrap">33-й км</span><small>Рядом остановка «Летний Отдых» и платформа Захарово</small></p>
+  <div class="g-btns"><a class="btn a" href="https://yandex.ru/maps/?rtext=~55.644534%2C36.977535&rtt=auto" target="_blank" rel="noopener">Маршрут</a><button class="btn o" type="button" id="mapLive">Открыть карту</button></div>
+  <button class="g-x" type="button" id="mapClose" aria-label="Закрыть карту">×</button>
+ </div>
+</section>
+</main>
+<footer class="ft"><span>BLKV · автосвет и ремонт фар · Звенигородское шоссе</span><a href="https://yandex.ru/maps/org/136634259206/" target="_blank" rel="noopener">Мы на Яндекс Картах</a></footer>
+
+<div class="mbar" id="mbar"><a class="btn a" href="#book" data-book>Записаться</a><a class="btn o" href="#fix">Подбор</a><a class="btn o" href="tel:+79951182607" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a></div>
+<div class="lbx" id="lb" role="dialog" aria-modal="true" aria-labelledby="lbt"><button class="x" id="lbx" aria-label="Закрыть">×</button><img id="lbi" alt=""><div class="t"><h3 id="lbt"></h3><p id="lbp"></p></div></div>
+
+<div class="bk" id="bk" aria-hidden="true">
+ <div class="bk-bg" data-close></div>
+ <div class="bk-card" role="dialog" aria-modal="true" aria-labelledby="bkT"><div class="bk-in">
+  <button class="bk-x" type="button" data-close aria-label="Закрыть">×</button><span class="bk-grab" aria-hidden="true"></span>
+  <small class="bk-k">Запись</small><h3 id="bkT">Куда вам удобнее написать?</h3><p class="bk-sub" id="bkS"></p>
+  <div class="bk-list">
+   <a class="bk-o" data-ch="tg" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.3-1.5zM9.6 14.6l-.4 4.1-1.4-4.6 10.6-6.7-8.8 7.2z"/></svg></i><span><b>Telegram</b><small>Александр, текст скопируем</small></span><em>→</em></a>
+   <a class="bk-o" data-ch="wa" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></i><span><b>WhatsApp</b><small>Александр, текст подставим</small></span><em>→</em></a>
+   <a class="bk-o" data-ch="max" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.9 2 11.7c0 2.4 1.1 4.6 3 6.2L4.3 21l3.6-1.8c1.3.4 2.6.6 4.1.6 5.5 0 10-3.9 10-8.7S17.5 3 12 3zm-4.6 11.6V8.8h1.4l2 2.9 2-2.9h1.4v5.8h-1.5v-3.5l-1.9 2.6-1.9-2.6v3.5H7.4z"/></svg></i><span><b>Max</b><small>Александр, текст скопируем</small></span><em>→</em></a>
+   <a class="bk-o" data-ch="call"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></i><span><b>Позвонить</b><small id="bkPh"></small></span><em>→</em></a>
+  </div>
+  <div class="bk-msg" id="bkM"><b>Текст для чата</b><span id="bkMt"></span></div>
+  <p class="bk-note" id="bkN" aria-live="polite"></p></div></div>
+</div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fmt=n=>n.toLocaleString('ru-RU').replace(/\s/g,' ');
+$$('h2').forEach(h=>{h.innerHTML=h.innerHTML.split(/<br\s*\/?>/i).map(x=>`<span class="ln"><b>${x}</b></span>`).join('')});
+const hero=$('.hero');
+const onS=()=>{const y=scrollY;$('#nav').classList.toggle('s',y>40);const ct=$('#contacts').getBoundingClientRect().top;$('#mbar').classList.toggle('on',y>innerHeight*.8&&ct>innerHeight*.6)};addEventListener('scroll',onS,{passive:true});onS();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -8% 0px'});
+$$('[data-r],[data-img],h2').forEach(el=>io.observe(el));
+$$('.wg .c').forEach((c,i)=>{c.querySelector('[data-img]').style.transitionDelay=(i%4)*.12+'s'});
+const vis=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('off',!e.isIntersecting)));vis.observe($('#mq'));vis.observe($('#gate'));
+
+// ФАРЫ НА ПЕРВОМ ЭКРАНЕ. Точка фары на исходном фото (доли ширины и высоты), пересчёт под object-fit:cover
+const LAMP={x:.592,y:.452};
+function placeGlow(){const img=$('#heroImg'),box=img.parentElement.getBoundingClientRect(),hb=hero.getBoundingClientRect();
+ const iw=img.naturalWidth||853,ih=img.naturalHeight||1280,s=Math.max(box.width/iw,box.height/ih),dw=iw*s,dh=ih*s;
+ const pos=getComputedStyle(img).objectPosition.split(' ').map(v=>parseFloat(v)/100);
+ const x=box.left-hb.left+(box.width-dw)*pos[0]+LAMP.x*dw,y=box.top-hb.top+(box.height-dh)*pos[1]+LAMP.y*dh;
+ hero.style.setProperty('--hx',x+'px');hero.style.setProperty('--hy',y+'px')}
+const lampT=$('#lampT'),lamp=$('#lamp');
+function setLit(on,first){hero.classList.toggle('lit',on);lamp.setAttribute('aria-pressed',on);lampT.textContent=on?'Выключить свет':'Включить свет';
+ hero.classList.remove('on');if(on)setTimeout(()=>hero.classList.contains('lit')&&hero.classList.add('on'),first&&!RM?1500:RM?0:1500)}
+lamp.onclick=()=>setLit(!hero.classList.contains('lit'));
+const go=()=>{if(hero.classList.contains('go'))return;placeGlow();hero.classList.add('go');setTimeout(()=>setLit(true,true),RM?0:1300)};
+addEventListener('load',()=>setTimeout(go,60));setTimeout(go,1400);addEventListener('resize',placeGlow);
+$('#heroImg').decode?.().then(placeGlow).catch(()=>{});
+
+// пара Kia: галоген → Bi-LED (одна машина из отзыва, разные кадры, поэтому переключатель, а не шторка)
+const pair=$('#pair'),seg=$('#seg');
+seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{const v=b.dataset.v==='1';pair.classList.toggle('after',v);seg.classList.toggle('r',v);
+ seg.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));$('#pairTag').textContent=v?'Bi-LED':'Галоген'});
+// один раз показываем «было», потом «стало», когда карточка на экране
+if(!RM)setTimeout(()=>{seg.querySelector('[data-v="0"]').click();setTimeout(()=>seg.querySelector('[data-v="1"]').click(),1600)},3200);
+
+// ПОДБОР ПО ПРОБЛЕМЕ. Описания и цены из карточки студии на Яндекс Картах
+const FIX=[
+ {s:'dim',t:'Тускло светят',d:'Ночью плохо видно дорогу',svc:'Bi-LED линзы под ключ',p:20000,
+  li:['Разбираем фары и ставим Bi-LED модули с переходными рамками','Собираем герметично и выставляем свет','Подскажем, какие линзы лучше под вашу машину'],note:'Часто успеваем за день.'},
+ {s:'fog',t:'Запотевают изнутри',d:'Конденсат после мойки или дождя',svc:'Устранение запотевания',p:7000,
+  li:['Диагностика причины бесплатно','Восстанавливаем герметичность, меняем уплотнители и осушители','Чистим, регулируем прижим, полируем стекло'],note:'Сначала найдём причину, потом назовём цену.'},
+ {s:'matte',t:'Помутнели, пожелтели',d:'Пластик потерял прозрачность',svc:'Полировка фар',p:2000,
+  li:['Возвращаем прозрачность и яркость света','Можно сразу защитить плёнкой, чтобы не мутнели снова','Работаем с любыми марками'],note:'Перед продажей машины особенно заметно.'},
+ {s:'drl',t:'ДХО или «глазки» не горят',d:'Или светят разным цветом',svc:'Ремонт ДХО и «ангельских глазок»',p:12000,
+  li:['Ремонтируем ДХО, «глазки», световоды и платы','Добиваемся одинакового цвета','Диагностика электрики, чтобы не горели ошибки'],note:'Цена зависит от фары, скажем по фото.'},
+ {s:'crack',t:'Трещина или сломаны крепления',d:'После ДТП, камня или удара',svc:'Ремонт креплений и стёкол',p:5000,
+  li:['Восстанавливаем «ушки», кронштейны и посадочные места','Армируем, чтобы узел держал вибрацию','Меняем треснувшее стекло фары'],note:'Ремонт креплений от 5 000 ₽, замену стекла посчитаем по фото.'},
+ {s:'aim',t:'Слепят встречных',d:'Или светят не туда',svc:'Регулировка света фар',p:2500,
+  li:['Регулируем ближний и дальний свет','Занимает 20–30 минут','Можно подождать на месте'],note:'Быстрее всего из наших работ.'}];
+const ADD={t:'Бронь фар плёнкой',p:2000};
+let fx=0,addOn=false,fixMsg='';
+$('#sym').innerHTML=FIX.map((f,i)=>`<button type="button" role="radio" aria-checked="${i?'false':'true'}" data-i="${i}"${i?'':' class="on"'}><span class="no">0${i+1}</span><span><b>${f.t}</b><small>${f.d}</small></span><em>от ${fmt(f.p)} ₽</em></button>`).join('');
+const scheme=$('#scheme'),scSeg=$('#scSeg');let scT;
+function setAfter(v){scheme.classList.toggle('after',v);scSeg.classList.toggle('r',v);scSeg.querySelectorAll('button').forEach(b=>b.classList.toggle('on',(b.dataset.v==='1')===v));$('#scLbl').textContent=v?'После':'Сейчас'}
+scSeg.querySelectorAll('button').forEach(b=>b.onclick=()=>{clearTimeout(scT);setAfter(b.dataset.v==='1')});
+// FIXPHOTO=true, когда в img/ лягут fix-after.jpg и fix-<проблема>.jpg: рисунок заменится фото. Пока false = схема
+const FIXPHOTO=true;
+if(FIXPHOTO){const fxImg=new Image();fxImg.onload=()=>{$('#fxAft').src=fxImg.src;scheme.classList.add('photo');$('#fxNow').src='img/fix-'+FIX[fx].s+'.jpg';
+ // остальные кадры подгружаем заранее, чтобы при выборе проблемы не было пустого мигания
+ FIX.forEach(f=>{const i=new Image();i.src='img/fix-'+f.s+'.jpg'})};fxImg.src='img/fix-after.jpg'}
+function renderFix(anim){const f=FIX[fx],tot=f.p+(addOn?ADD.p:0);scheme.dataset.s=f.s;if(scheme.classList.contains('photo'))$('#fxNow').src='img/fix-'+f.s+'.jpg';setAfter(false);clearTimeout(scT);if(!RM)scT=setTimeout(()=>setAfter(true),1800);
+ $$('#sym button').forEach((b,i)=>{b.classList.toggle('on',i===fx);b.setAttribute('aria-checked',i===fx)});
+ const r=$('#resB');r.innerHTML=`<div class="${anim?'swap':''}"><div class="svc">Что делаем</div><h3>${f.svc}</h3><ul>${f.li.map(x=>`<li>${x}</li>`).join('')}</ul>
+  <div class="res-row"><div class="pr"><small>от</small>${fmt(tot)} ₽</div><button type="button" class="addon${addOn?' on':''}" id="addon" aria-pressed="${addOn}"><i></i>+ ${ADD.t}, от ${fmt(ADD.p)} ₽</button></div>
+  <a class="btn a" href="#book" data-book data-fix>Отправить Александру</a><p class="fine">${f.note} Цены «от» из карточки на Картах, на работы гарантия.</p></div>`;
+ $('#addon').onclick=()=>{addOn=!addOn;renderFix(false)};
+ fixMsg=`Здравствуйте! Я с сайта. Беспокоит: ${f.t}. Интересует: ${f.svc}${addOn?' + бронь фар плёнкой':''}, по прайсу от ${fmt(tot)} ₽. Машина: `}
+$$('#sym button').forEach(b=>b.onclick=()=>{fx=+b.dataset.i;renderFix(true);
+ // на телефоне результат ниже списка: подвозим к схеме, чтобы было видно «сейчас → после»
+ if(innerWidth<=980)$('#scheme').scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})});
+// стрелки внутри списка, как у обычных радиокнопок
+$('#sym').addEventListener('keydown',e=>{if(!/Arrow(Up|Down)/.test(e.key))return;e.preventDefault();fx=(fx+(e.key==='ArrowDown'?1:FIX.length-1))%FIX.length;renderFix(true);$$('#sym button')[fx].focus()});
+renderFix(false);
+
+// ПРАЙС карточками. [название, цена «от» (0 = по фото), пояснение, срок или пометка, иконка]. Цены из карточки на Картах
+const IC={lens:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/>',aim:'<path d="M3 12h4M17 12h4M12 3v4M12 17v4"/><circle cx="12" cy="12" r="5"/>',ring:'<circle cx="8" cy="12" r="4"/><circle cx="17" cy="12" r="3.2"/><path d="M2 6c4-2 16-2 20 0"/>',
+ drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',chip:'<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',bolt:'<path d="M14 3h6v6M20 3l-8 8M4 13v7h7"/><circle cx="6" cy="6" r="2"/>',
+ crack:'<rect x="3" y="5" width="18" height="14" rx="4"/><path d="M14 5l-3 5 3 2-4 7"/>',shine:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/>',shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',paint:'<path d="M4 20c3 0 4-1.5 4-3.5S9.5 13 11 13l8-8-2-2-8 8c-1.5 1.5-1 3.5-3 4.5"/>'};
+const PRICE=[
+ [['Bi-LED линзы под ключ',20000,'Разбираем фары, ставим модули с переходными рамками, собираем герметично','часто за день','lens',1],['Регулировка света фар',2500,'Ближний и дальний, чтобы не слепить встречных','20–30 минут','aim'],['«Глазки», ДХО, светодиоды в туманки',0,'Подберём под вашу фару и цвет','по фото','ring']],
+ [['Устранение запотевания',7000,'Герметичность, уплотнители, осушители, чистка изнутри','диагностика бесплатно','drop',1],['Ремонт ДХО и «ангельских глазок»',12000,'Световоды, платы, электрика, одинаковый цвет','по фото точнее','chip'],['Ремонт креплений фар',5000,'«Ушки», кронштейны и посадочные места с армированием','гарантия','bolt'],['Замена стекла фары',0,'После ДТП, камня или трещины, подбираем герметик','по фото','crack']],
+ [['Полировка фар',2000,'Возвращаем прозрачность и яркость света','быстро','shine',1],['Бронь фар полиуретаном',2000,'Прозрачная плёнка от сколов и песка, свет не теряется','гарантия','shield'],['Окраска и дизайн фар',0,'Цвет корпуса, декоративные элементы, LED-модули','по фото','paint']]];
+const pl=$('#plist'),pt=$('#ptabs'),pind=pt.querySelector('i');let prK=-1;
+function moveInd(){const b=pt.querySelector('button.on');if(b){pind.style.width=b.offsetWidth+'px';pind.style.transform=`translateX(${b.offsetLeft}px)`}}
+const pcard=(p,i)=>`<div class="pc${p[5]?' hit':''}" style="--i:${i}"><div class="pc-top"><span class="pc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[p[4]]}</svg></span>${p[5]?'<span class="pc-badge">Чаще всего</span>':''}</div>
+ <h3>${p[0]}</h3><p>${p[2]}</p><span class="pc-t">${p[3]}</span>
+ <div class="pc-price">${p[1]?`<small>от</small><strong>${fmt(p[1])} ₽</strong>`:'<strong>По фото</strong><small>назовём цену</small>'}</div>
+ ${p[1]?`<a class="btn ${p[5]?'a':'o'}" href="#book" data-book data-msg="Здравствуйте! Я с сайта. Интересует: ${p[0]}, по прайсу от ${fmt(p[1])} ₽. Машина: ">Записаться</a>`
+  :`<a class="btn o" href="#book" data-book data-msg="Здравствуйте! Я с сайта. Пришлю фото фары, подскажите цену. Услуга: ${p[0]}. Машина: " data-sub="Пришлите фото фары в чат, назовём цену. ">Прислать фото</a>`}</div>`;
+function showPrice(k,anim){if(k===prK)return;prK=k;$$('#ptabs button').forEach((b,i)=>{b.classList.toggle('on',i==k);b.setAttribute('aria-selected',i==k)});moveInd();
+ const draw=()=>{pl.style.setProperty('--n',PRICE[k].length);pl.innerHTML=PRICE[k].map(pcard).join('');pl.classList.remove('out')};
+ if(anim&&!RM){pl.classList.add('out');setTimeout(draw,200)}else draw()}
+$$('#ptabs button').forEach(b=>b.onclick=()=>showPrice(+b.dataset.k,true));showPrice(0);
+addEventListener('resize',moveInd);document.fonts&&document.fonts.ready.then(moveInd);
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){pl.classList.add('seen');o.disconnect()}}),{rootMargin:'0px 0px -12% 0px'}).observe(pl);
+// пятно света за курсором по карточке
+pl.addEventListener('pointermove',e=>{const c=e.target.closest('.pc');if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')});
+
+const lb=$('#lb');let lbFrom=null;
+$$('.c').forEach(c=>c.addEventListener('click',()=>{lbFrom=c;$('#lbi').src=c.querySelector('img').src;$('#lbi').alt=c.querySelector('img').alt;$('#lbt').textContent=c.querySelector('h3').textContent;$('#lbp').textContent=c.dataset.p;lb.classList.add('on');$('#lbx').focus({preventScroll:true})}));
+const closeLb=()=>{if(!lb.classList.contains('on'))return;lb.classList.remove('on');lbFrom&&lbFrom.focus({preventScroll:true})};$('#lbx').onclick=closeLb;lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+
+// ОКНО ЗАПИСИ. Telegram личный @BLKV_LIGHT; WhatsApp, Max и звонок на одном номере (Александр, 24.11).
+// Max: ссылка на профиль Александра (прислал 24.11 15:08), текст в Max не подставить, поэтому копируем.
+const BOOK={tg:'BLKV_LIGHT',wa:'79951182607',max:'https://max.ru/u/f9LHodD0cOInFZahajUGxndU4QHU-3QPquoGbF4ta5MS1500GnY4IenWfS0',phone:'+79951182607',phoneText:'+7 (995) 118-26-07',hours:'Ежедневно 10:00–20:00.'};
+const DEF='Здравствуйте! Я с сайта, хочу записаться. Машина: ';
+const bk=$('#bk'),bkN=$('#bkN');let bkFrom=null,bkMsg=DEF;
+function openBk(msg,from,sub){bkMsg=msg||DEF;bkFrom=from;bkN.textContent='';
+ $('#bkS').textContent=(sub||'Напишите марку машины и что беспокоит, можно с фото фары. ')+BOOK.hours;$('#bkMt').textContent=bkMsg;
+ bk.querySelector('[data-ch=tg]').href='https://t.me/'+BOOK.tg;bk.querySelector('[data-ch=max]').href=BOOK.max;bk.querySelector('[data-ch=wa]').href='https://wa.me/'+BOOK.wa+'?text='+encodeURIComponent(bkMsg);bk.querySelector('[data-ch=call]').href='tel:'+BOOK.phone;$('#bkPh').textContent=BOOK.phoneText;
+ bk.setAttribute('aria-hidden','false');document.documentElement.classList.add('lock');requestAnimationFrame(()=>bk.classList.add('on'));
+ window.ym&&YM&&ym(YM,'reachGoal','book_open');
+ setTimeout(()=>bk.querySelector('.bk-o').focus({preventScroll:true}),350)}
+function closeBk(){if(!bk.classList.contains('on'))return;bk.classList.remove('on');bk.setAttribute('aria-hidden','true');document.documentElement.classList.remove('lock');bkFrom&&bkFrom.focus({preventScroll:true})}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-book]');if(!a)return;e.preventDefault();e.stopPropagation();openBk(a.hasAttribute('data-fix')?(fixMsg||DEF):(a.dataset.msg||DEF),a,a.dataset.sub)});
+bk.querySelectorAll('[data-close]').forEach(x=>x.onclick=closeBk);
+bk.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const f=[...bk.querySelectorAll('button,a[href]')];const i=f.indexOf(document.activeElement);if(e.shiftKey&&i<=0){f[f.length-1].focus();e.preventDefault()}else if(!e.shiftKey&&i===f.length-1){f[0].focus();e.preventDefault()}});
+addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(bk.classList.contains('on'))closeBk();else closeLb()});
+bk.querySelector('[data-ch=tg]').addEventListener('click',()=>{if(navigator.clipboard)navigator.clipboard.writeText(bkMsg).then(()=>bkN.textContent='Текст скопирован, вставьте его в чат',()=>{})});
+bk.querySelector('[data-ch=max]').addEventListener('click',()=>{if(navigator.clipboard)navigator.clipboard.writeText(bkMsg).then(()=>bkN.textContent='Текст скопирован, вставьте его в чат',()=>{})});
+
+(()=>{const OPEN=10,CLOSE=20,h=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Moscow'})).getHours(),o=h>=OPEN&&h<CLOSE,l=$('#live');
+ l.classList.toggle('cl',!o);l.querySelector('span').textContent=o?`Открыто до ${CLOSE}:00`:`Закрыто до ${OPEN}:00`})();
+const gate=$('#gate');
+$('#mapLive').onclick=()=>{if(!gate.querySelector('iframe')){const f=document.createElement('iframe');f.src='https://yandex.ru/map-widget/v1/?oid=136634259206&z=15';f.title='BLKV на Яндекс Картах';f.allowFullscreen=true;gate.appendChild(f)}gate.classList.add('live')};
+$('#mapClose').onclick=()=>{gate.querySelector('iframe')?.remove();gate.classList.remove('live')};
+
+// ОТЗЫВЫ с Яндекс Карт (сокращены, слова клиентов). [имя, что делали, текст]
+const REV=[
+ ['Даниил Смирнов','Bi-LED вместо штатных фар','Проконсультировал по выбору линз, объяснил все нюансы. Отдал машину, к вечеру уже всё было готово под ключ. Фары отполированы идеально, покрыты плёнкой, зазоры выставлены в завод. Прайс адекватный.'],
+ ['Саша К.','Линзы и ремонт ДХО','На одной машине устанавливал линзы, на другой делал ремонт ДХО. Изначально была озвучена стоимость, и по итогу она не изменилась, никаких неприятных сюрпризов.'],
+ ['Александр П.','Свет на Geely Tugella','Обсудил с Александром все работы, получил отличные рекомендации, какие компоненты лучше поставить. Работы выполнили максимально аккуратно и в срок. Честные, ответственные, приятные.'],
+ ['Наталия Кочурова','Галоген на Bi-LED','Меняла галогенку на би лед! Разница космическая! Работа проделана качественно и быстро. Изучала рынок, цены ниже, чем где-либо в Москве.'],
+ ['Серёжа Мысик','Ремонт света, GL 500','Фары и «реснички» светили разным цветом. Сделал всё в оговорённые сроки, цена по ходу работ не изменилась, ошибок после ремонта не горит, светят одинаковым цветом.'],
+ ['Анна Е.','Восстановление фар','Перед продажей решила восстановить фары, за годы они сильно помутнели. После восстановления фары стали выглядеть как новые, внешний вид машины заметно преобразился.'],
+ ['Семён Молдавский','Замена стекла фары','В меня врезался самокатчик, и стекло треснуло. Всё сделали быстро и точно в оговорённые сроки. Заодно восстановили вторую фару, чтобы обе выглядели одинаково.'],
+ ['Gram Trap','Регулировка света','Обращался к Александру для регулировки света фар. Всё прошло быстро, качественно и без лишних хлопот.'],
+ ['Гортензия','Фары','Эксперты по работе с фарами! Сделали быстро, результат просто вау! Не думала, что у меня настолько красивая оптика. Цена не кусается.'],
+ ['Терем Княжий','Лазерные линзы и туманки','Поменял линзы с галогенок на лазерные, плюс светодиоды в туманки. Александр сделал всё быстро и красиво. Свет теперь просто космос.'],
+ ['Максим Г.','Сборка света','Посоветовал, как лучше поступить, на каких компонентах собрать свет. У него всё в наличии: приехал, поставил, уехал. Светит бомба.'],
+ ['Stylk','Дьявольские глазки','Приезжал на установку дьявольских глазок, работу выполнили качественно, быстро, по приемлемой цене!'],
+ ['Александр Ч.','Установка линз','Обратился к мастеру за установкой линз, всё на высшем уровне, цена-качество, рекомендую.'],
+ ['GRO','Свет','Сделал всё на высшем уровне. Ответственный мастер, советую всем!']];
+const esc=t=>t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const card=r=>`<article class="rc"><div class="st5" aria-label="5 из 5">★★★★★</div><p>${esc(r[2])}</p><div class="who"><span class="av">${esc(r[0][0].toUpperCase())}</span><span><b>${esc(r[0])}</b><small>${esc(r[1])}</small></span></div></article>`;
+let mqCols=0;
+function buildMq(){const n=innerWidth>980?3:2;if(n===mqCols)return;mqCols=n;const cols=[...Array(n)].map(()=>[]);REV.forEach((r,i)=>cols[i%n].push(r));
+ const mq=$('#mq');mq.style.setProperty('--cols',n);
+ mq.innerHTML=cols.map((c,i)=>{const html=c.map(card).join('');return `<div class="mq-col${i%2?' dn':''}" style="--dur:${n===3?[46,54,50][i]:[58,66][i]}s"${i?' aria-hidden="true"':''}>${html}${RM?'':html.replace(/<article class="rc"/g,'<article class="rc" aria-hidden="true"')}</div>`}).join('')}
+buildMq();addEventListener('resize',buildMq);
+
+(()=>{const tl=$('#tl'),fill=$('#tlFill'),dot=$('#tlDot'),steps=$$('.ts');let tick=false;
+ const upd=()=>{tick=false;const r=tl.getBoundingClientRect(),mark=innerHeight*.6;const p=Math.max(0,Math.min(1,(mark-r.top)/r.height));
+  fill.style.transform=`scaleY(${p})`;dot.style.transform=`translateY(${p*(r.height-20)}px)`;
+  steps.forEach(s=>s.classList.toggle('on',s.getBoundingClientRect().top+40<mark))};
+ if(RM){steps.forEach(s=>s.classList.add('on'));return}
+ addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);upd()})();
+</script>
+<!-- Яндекс Метрика. Вставить номер счётчика в YM, пока пусто, ничего не грузится.
+     Цели (JavaScript-событие): lead_tg, lead_wa, lead_max, lead_call (= обращения), book_open, route -->
+<script>
+var YM='';
+(()=>{if(!YM)return;
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
+ym(YM,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+const goal=h=>/t\.me\//.test(h)?'lead_tg':/wa\.me\//.test(h)?'lead_wa':/max\.ru\/u\//.test(h)?'lead_max':/^tel:/.test(h)?'lead_call':/rtext=/.test(h)?'route':'';
+document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const g=goal(a.getAttribute('href')||'');if(g)ym(YM,'reachGoal',g)},true);
+})();
+</script>
+</body>
+</html>
