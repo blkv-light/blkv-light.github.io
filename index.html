@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>BLKV: Bi-LED линзы и ремонт фар на Звенигородском шоссе</title>
 <meta name="description" content="Автосвет BLKV: установка Bi-LED линз под ключ, ремонт ДХО и «ангельских глазок», запотевание, полировка и бронь фар. Звенигородское шоссе, 33-й км, Одинцовский округ. Ежедневно 10:00–20:00. 4,8 на Яндекс Картах.">
-<meta name="robots" content="noindex, nofollow"><!-- черновик: снять noindex при запуске -->
 <meta name="theme-color" content="#08080a">
 <link rel="icon" href="img/logo.jpg">
 <meta property="og:title" content="BLKV: Bi-LED линзы и ремонт фар">
@@ -808,16 +807,17 @@ buildMq();addEventListener('resize',buildMq);
  if(RM){steps.forEach(s=>s.classList.add('on'));return}
  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);upd()})();
 </script>
-<!-- Яндекс Метрика. Вставить номер счётчика в YM, пока пусто, ничего не грузится.
+<!-- Яндекс Метрика, счётчик 114656381 (подключён 24.11).
      Цели (JavaScript-событие): lead_tg, lead_wa, lead_max, lead_call (= обращения), book_open, route -->
 <script>
-var YM='';
+var YM=114656381;
 (()=>{if(!YM)return;
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
-ym(YM,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114656381','ym');
+ym(YM,'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
 const goal=h=>/t\.me\//.test(h)?'lead_tg':/wa\.me\//.test(h)?'lead_wa':/max\.ru\/u\//.test(h)?'lead_max':/^tel:/.test(h)?'lead_call':/rtext=/.test(h)?'route':'';
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const g=goal(a.getAttribute('href')||'');if(g)ym(YM,'reachGoal',g)},true);
 })();
 </script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114656381" style="position:absolute;left:-9999px" alt=""></div></noscript>
 </body>
 </html>
